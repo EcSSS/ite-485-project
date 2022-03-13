@@ -12,7 +12,7 @@ namespace ite_485_project
 {
     public partial class OpenCases : Form
     {
-        string connectionString = @"Server=tcp:ite-485-database-sever.database.windows.net,1433;Initial Catalog=ite-485-database;Persist Security Info=False;User ID=EcS;Password={Eric20000};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        string connectionString = @"Server=tcp:ite-485-database-sever.database.windows.net,1433;Initial Catalog=ite-485-database;Persist Security Info=False;User ID=EcS;Password=Eric20000;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
       
         public OpenCases()
         {
@@ -24,7 +24,7 @@ namespace ite_485_project
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dbo.CaseInfo", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dbo.CaseInfo WHERE CaseStatus=1", sqlCon);
                 DataTable dtbl1 = new DataTable();
                 sqlDa.Fill(dtbl1);
 
@@ -38,6 +38,13 @@ namespace ite_485_project
             Form1 home = new Form1();
             home.ShowDialog();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int index = dataGridView1.CurrentRow.Index;
+            index = index + 1;
+            MessageBox.Show(index.ToString());
         }
     }
 }
