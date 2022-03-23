@@ -5,12 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using IronOcr;
+using System.IO;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
+
 
 namespace ite_485_project
 {
+
     public partial class NewCase : Form
     {
+        
         public NewCase()
         {
             InitializeComponent();
@@ -24,26 +29,37 @@ namespace ite_485_project
         private void button1_Click(object sender, EventArgs e)
         {
 
+            string filepath = txtFilePath.Text;
 
-            
-
-
-            //var filepath = txtFilePath.Text;
-
-            //var Ocr = new IronTesseract();
-
-            //using (var Input = new OcrInput())
-            //{
+            using (Stream stream = File.OpenRead(filepath))
+            {
+                byte[] buffer = new byte[stream.Length];
+                stream.Read(buffer, 0, buffer.Length);
+                string FileName = new FileInfo(filepath).Name;
+                string extn = new FileInfo(filepath).Extension;
+                long size = new FileInfo(filepath).Length;
+                string query = "INSERT INTO dbo.Documents(DisplayName,Extension,FileData,FileSize)VALUES(@DisplayName,@Extension,@FileData,@FileSize)";
                 
-            //        Input.AddPdf(filepath);
-            //        var Result = Ocr.Read(Input);
-            //        System.IO.File.WriteAllText("C:\\Users\\erics\\Documents\\test.txt", Result.Text);
-                         
-            //}
+
+                using (SqlConnection cn = GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.Add("@FileData", SqlDbType.VarBinary).Value = buffer;
+                    cmd.Parameters.Add("@Extension", SqlDbType.VarChar).Value = extn;
+                    cmd.Parameters.Add("@DisplayName", SqlDbType.VarChar).Value = FileName;
+                    cmd.Parameters.Add("@FileSize", SqlDbType.BigInt).Value = size;
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+
+                
+
+            }
         }
 
         private void btnSelectFile_Click(object sender, EventArgs e)
         {
+
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
                 InitialDirectory = @"C:\",
@@ -53,9 +69,10 @@ namespace ite_485_project
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+
                 txtFilePath.Text = openFileDialog1.FileName;
+
             }
-        
 
         }
 
@@ -77,6 +94,11 @@ namespace ite_485_project
             Controls.Add(timePicker);
             
 
+        }
+
+        private SqlConnection GetConnection()
+        {
+            return new SqlConnection(@"Server=tcp:ite-485-database-sever.database.windows.net,1433;Initial Catalog=ite-485-database;Persist Security Info=False;User ID=EcS;Password=Eric20000;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
     }
 }

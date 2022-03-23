@@ -44,7 +44,13 @@ namespace ite_485_project
         {
             int index = dataGridView1.CurrentRow.Index;
             index = index + 1;
-            MessageBox.Show(index.ToString());
-        }
+
+            
+
+
+
+    }
+
+        
     }
 }

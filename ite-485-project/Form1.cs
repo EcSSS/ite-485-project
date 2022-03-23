@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using IronOcr;
+
 
 
 namespace ite_485_project
@@ -17,7 +17,9 @@ namespace ite_485_project
         public Form1()
         {
             InitializeComponent();
-        }     
+        }
+
+        public static object SelectedRow { get; internal set; }
 
         private void btnClosedCase_Click(object sender, EventArgs e)
         {
@@ -45,6 +47,14 @@ namespace ite_485_project
             this.Hide();
             OpenCases opencase = new OpenCases();
             opencase.ShowDialog();
+            this.Close();
+        }
+
+        private void btntest_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ShowCase showCase = new ShowCase();
+            showCase.ShowDialog();
             this.Close();
         }
     }

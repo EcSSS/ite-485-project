@@ -32,12 +32,10 @@ namespace ite_485_project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewCase));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ckPDF = new System.Windows.Forms.CheckBox();
             this.ckImage = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtEvidenceNo = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnSelectFile = new System.Windows.Forms.Button();
@@ -53,6 +51,7 @@ namespace ite_485_project
             this.label8 = new System.Windows.Forms.Label();
             this.timePicker = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -71,18 +70,8 @@ namespace ite_485_project
             this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 25);
+            this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "DFIS";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Case No";
             // 
             // label3
             // 
@@ -96,7 +85,7 @@ namespace ite_485_project
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 88);
+            this.label4.Location = new System.Drawing.Point(23, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 15);
             this.label4.TabIndex = 4;
@@ -122,13 +111,6 @@ namespace ite_485_project
             this.ckImage.Text = "Image";
             this.ckImage.UseVisualStyleBackColor = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(124, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 23);
-            this.textBox1.TabIndex = 7;
-            // 
             // txtEvidenceNo
             // 
             this.txtEvidenceNo.Location = new System.Drawing.Point(124, 317);
@@ -138,7 +120,7 @@ namespace ite_485_project
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(124, 80);
+            this.textBox3.Location = new System.Drawing.Point(124, 46);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(124, 23);
             this.textBox3.TabIndex = 9;
@@ -163,7 +145,7 @@ namespace ite_485_project
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 119);
+            this.label5.Location = new System.Drawing.Point(23, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 15);
             this.label5.TabIndex = 12;
@@ -171,7 +153,7 @@ namespace ite_485_project
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(124, 110);
+            this.textBox4.Location = new System.Drawing.Point(124, 76);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(124, 23);
             this.textBox4.TabIndex = 13;
@@ -255,12 +237,23 @@ namespace ite_485_project
             this.label9.TabIndex = 22;
             this.label9.Text = "Time";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Bernard MT Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(12, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 25);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "CIISS";
+            // 
             // NewCase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(468, 468);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.timePicker);
             this.Controls.Add(this.label8);
@@ -276,12 +269,10 @@ namespace ite_485_project
             this.Controls.Add(this.btnSelectFile);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.txtEvidenceNo);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ckImage);
             this.Controls.Add(this.ckPDF);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "NewCase";
@@ -296,12 +287,10 @@ namespace ite_485_project
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox ckPDF;
         private System.Windows.Forms.CheckBox ckImage;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtEvidenceNo;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btnSelectFile;
@@ -317,5 +306,6 @@ namespace ite_485_project
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker timePicker;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
