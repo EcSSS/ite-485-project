@@ -1,8 +1,7 @@
 # ite-485-project Documentation
-# This project is for the ITE-485 end of degree demo class
 #
-
-
+* This project is for the ITE-485 end of degree demo class
+#
 # Notes to mention
   *Due the the nature of the timeframe given some decision about the functionality were made in order to make sure the project would be finished in time
   
