@@ -12,10 +12,6 @@ using System.Diagnostics;
 using System.Threading;
 
 
-
-
-
-
 namespace ite_485_project
 {
     public partial class ShowCase : Form
@@ -28,12 +24,15 @@ namespace ite_485_project
 
         private void ShowCase_Load(object sender, EventArgs e)
         {
+            
+
+            txtCaseNo.Text = OpenCases.SetValue;
 
 
             using (SqlConnection cn = GetConnection())
             {
                 
-                string query = "SELECT SNo,DisplayName,Extension FROM dbo.tblDocuments";
+                string query = "SELECT SNo,DisplayName,Extension FROM dbo.Documents WHERE CaseNum='" + txtCaseNo.Text +"'";
                 SqlDataAdapter adp = new SqlDataAdapter(query, cn);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -86,7 +85,7 @@ namespace ite_485_project
             {
                 FileStream FS = null;
                 
-                string query = "SELECT FileData,DisplayName,Extension FROM dbo.tblDocuments WHERE SNo=@SNo";
+                string query = "SELECT FileData,DisplayName,Extension FROM dbo.Documents WHERE SNo=@SNo";
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.Parameters.Add("@SNo", SqlDbType.Int).Value = id;
                 cn.Open();
@@ -132,7 +131,7 @@ namespace ite_485_project
                 string FileName = new FileInfo(filepath).Name;
                 string extn = new FileInfo(filepath).Extension;
                 long size = new FileInfo(filepath).Length;
-                string query = "INSERT INTO dbo.tblDocuments(DisplayName,Extension,FileData,FileSize)VALUES(@DisplayName,@Extension,@FileData,@FileSize)";
+                string query = "INSERT INTO dbo.Documents(DisplayName,Extension,FileData,FileSize)VALUES(@DisplayName,@Extension,@FileData,@FileSize)";
 
 
                 using (SqlConnection cn = GetConnection())

@@ -40,7 +40,7 @@ namespace ite_485_project
                 string FileName = new FileInfo(filepath).Name;
                 string extn = new FileInfo(filepath).Extension;
                 long size = new FileInfo(filepath).Length;
-                string query = "INSERT INTO dbo.tblDocuments(DisplayName,Extension,FileData,FileSize)VALUES(@DisplayName,@Extension,@FileData,@FileSize)";
+                string query = "INSERT INTO dbo.Documents(FileData,Extension,DisplayName,FileSize)VALUES(@FileData,@Extension,@DisplayName,@FileSize)";
                 
 
                 using (SqlConnection cn = GetConnection())
@@ -57,7 +57,7 @@ namespace ite_485_project
 
                 string officerName = txtOfficer.Text;
                 string offenderName = txtOffender.Text;
-                string query2 = "INSERT INTO dbo.tblCaseInfo(OfficerName,OffenderName)VALUES(@OfficerName,@OffenderName)";
+                string query2 = "INSERT INTO dbo.CaseInfo(OfficerName,OffenderName)VALUES(@OfficerName,@OffenderName)";
 
                 using (SqlConnection cn = GetConnection())
                 {
@@ -82,13 +82,15 @@ namespace ite_485_project
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
                 InitialDirectory = @"C:\",
+                Filter = "Pdf Files|*.pdf|Image Files|*.bmp;*.jpg;*.gif;*.png;*.tif",
                 Title = "Browse Files",
+                
 
             };
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
+                
                 txtFilePath.Text = openFileDialog1.FileName;
 
             }

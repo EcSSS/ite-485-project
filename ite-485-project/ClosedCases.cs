@@ -31,7 +31,7 @@ namespace ite_485_project
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dbo.tblCaseInfo WHERE CaseStatus=0", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dbo.CaseInfo WHERE CaseStatus=0", sqlCon);
                 DataTable dtbl1 = new DataTable();
                 sqlDa.Fill(dtbl1);
 
