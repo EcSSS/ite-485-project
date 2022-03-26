@@ -13,6 +13,7 @@ namespace ite_485_project
     public partial class OpenCases : Form
     {
         string connectionString = @"Server=tcp:ite-485-database-sever.database.windows.net,1433;Initial Catalog=ite-485-database;Persist Security Info=False;User ID=EcS;Password=Eric20000;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
       
         public OpenCases()
         {
