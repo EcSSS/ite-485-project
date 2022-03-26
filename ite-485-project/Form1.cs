@@ -53,8 +53,8 @@ namespace ite_485_project
         private void btntest_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ShowCase showCase = new ShowCase();
-            showCase.ShowDialog();
+            ShowCase showCase3 = new ShowCase();
+            showCase3.ShowDialog();
             this.Close();
         }
     }

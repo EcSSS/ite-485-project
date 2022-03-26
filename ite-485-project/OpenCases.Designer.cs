@@ -57,6 +57,7 @@ namespace ite_485_project
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(776, 420);
             this.dataGridView1.TabIndex = 5;
+
             // 
             // button1
             // 

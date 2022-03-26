@@ -33,12 +33,14 @@ namespace ite_485_project
 
             using (Stream stream = File.OpenRead(filepath))
             {
+                
+                
                 byte[] buffer = new byte[stream.Length];
                 stream.Read(buffer, 0, buffer.Length);
                 string FileName = new FileInfo(filepath).Name;
                 string extn = new FileInfo(filepath).Extension;
                 long size = new FileInfo(filepath).Length;
-                string query = "INSERT INTO dbo.Documents(DisplayName,Extension,FileData,FileSize)VALUES(@DisplayName,@Extension,@FileData,@FileSize)";
+                string query = "INSERT INTO dbo.tblDocuments(DisplayName,Extension,FileData,FileSize)VALUES(@DisplayName,@Extension,@FileData,@FileSize)";
                 
 
                 using (SqlConnection cn = GetConnection())
@@ -50,9 +52,26 @@ namespace ite_485_project
                     cmd.Parameters.Add("@FileSize", SqlDbType.BigInt).Value = size;
                     cn.Open();
                     cmd.ExecuteNonQuery();
+                    cn.Close();
                 }
 
-                
+                string officerName = txtOfficer.Text;
+                string offenderName = txtOffender.Text;
+                string query2 = "INSERT INTO dbo.tblCaseInfo(OfficerName,OffenderName)VALUES(@OfficerName,@OffenderName)";
+
+                using (SqlConnection cn = GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(query2, cn);
+                    cmd.Parameters.Add("@OfficerName", SqlDbType.VarChar).Value = officerName;
+                    cmd.Parameters.Add("@OffenderName", SqlDbType.VarChar).Value = offenderName;
+                    cmd.Parameters.Add("CaseStatus", SqlDbType.SmallInt).Value = 1;
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    cn.Close();
+                    
+                }
+
+
 
             }
         }

@@ -9,13 +9,18 @@ using System.IO;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Diagnostics;
+using System.Threading;
+
+
+
+
 
 
 namespace ite_485_project
 {
     public partial class ShowCase : Form
     {
-  
+        
         public ShowCase()
         {
             InitializeComponent();
@@ -23,10 +28,12 @@ namespace ite_485_project
 
         private void ShowCase_Load(object sender, EventArgs e)
         {
+
+
             using (SqlConnection cn = GetConnection())
             {
                 
-                string query = "SELECT SNo,DisplayName,Extension FROM dbo.Documents";
+                string query = "SELECT SNo,DisplayName,Extension FROM dbo.tblDocuments";
                 SqlDataAdapter adp = new SqlDataAdapter(query, cn);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -61,22 +68,29 @@ namespace ite_485_project
         private void button1_Click(object sender, EventArgs e)
         {
             var selectedRow = dataGridView1.SelectedRows;
-            foreach(var row in selectedRow)
+            foreach (var row in selectedRow)
             {
                 int id = (int)((DataGridViewRow)row).Cells[0].Value;
 
                 OpenFile(id);
             }
+            
+
         }
         private void OpenFile(int id)
         {
+
+
+
             using (SqlConnection cn = GetConnection())
             {
-
-                string query = "SELECT FileData,DisplayName,Extension FROM dbo.Documents WHERE SNo=@SNo";
+                FileStream FS = null;
+                
+                string query = "SELECT FileData,DisplayName,Extension FROM dbo.tblDocuments WHERE SNo=@SNo";
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.Parameters.Add("@SNo", SqlDbType.Int).Value = id;
                 cn.Open();
+
                 var reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
@@ -84,12 +98,20 @@ namespace ite_485_project
                     var data = (byte[])reader["FileData"];
                     var extn = reader["Extension"].ToString();
                     var newFileName = name.Replace(extn, DateTime.Now.ToString("ddMMyyyyhhmmss")) + extn;
+                    string filepath = @"C:\Users\erics\Downloads\" + name + ".pdf";
 
-                    File.WriteAllBytes(newFileName, data);
+                    FS = new FileStream(filepath, System.IO.FileMode.Create);
+
+                    FS.Write(data, 0, data.Length);
+                    FS.Close();
+
+                    string adobeReaderPath = @"C:\Program Files\Adobe\Acrobat DC\Acrobat\Acrobat.exe";
+
+                    System.Diagnostics.Process.Start(adobeReaderPath, filepath);
+
                     
                     
-                    System.Diagnostics.Process.Start(newFileName);
-      
+
                 }
 
             }
@@ -110,7 +132,7 @@ namespace ite_485_project
                 string FileName = new FileInfo(filepath).Name;
                 string extn = new FileInfo(filepath).Extension;
                 long size = new FileInfo(filepath).Length;
-                string query = "INSERT INTO dbo.Documents(DisplayName,Extension,FileData,FileSize)VALUES(@DisplayName,@Extension,@FileData,@FileSize)";
+                string query = "INSERT INTO dbo.tblDocuments(DisplayName,Extension,FileData,FileSize)VALUES(@DisplayName,@Extension,@FileData,@FileSize)";
 
 
                 using (SqlConnection cn = GetConnection())
@@ -126,6 +148,14 @@ namespace ite_485_project
                 
 
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 home = new Form1();
+            home.ShowDialog();
+            this.Close();
         }
     }
 }

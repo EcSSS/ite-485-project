@@ -32,16 +32,14 @@ namespace ite_485_project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewCase));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ckPDF = new System.Windows.Forms.CheckBox();
             this.ckImage = new System.Windows.Forms.CheckBox();
-            this.txtEvidenceNo = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtOfficer = new System.Windows.Forms.TextBox();
             this.btnSelectFile = new System.Windows.Forms.Button();
             this.txtFilePath = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtOffender = new System.Windows.Forms.TextBox();
             this.ckWord = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -73,15 +71,6 @@ namespace ite_485_project
             this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 1;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 325);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Evidence No";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -111,19 +100,12 @@ namespace ite_485_project
             this.ckImage.Text = "Image";
             this.ckImage.UseVisualStyleBackColor = true;
             // 
-            // txtEvidenceNo
+            // txtOfficer
             // 
-            this.txtEvidenceNo.Location = new System.Drawing.Point(124, 317);
-            this.txtEvidenceNo.Name = "txtEvidenceNo";
-            this.txtEvidenceNo.Size = new System.Drawing.Size(124, 23);
-            this.txtEvidenceNo.TabIndex = 8;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(124, 46);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(124, 23);
-            this.textBox3.TabIndex = 9;
+            this.txtOfficer.Location = new System.Drawing.Point(124, 46);
+            this.txtOfficer.Name = "txtOfficer";
+            this.txtOfficer.Size = new System.Drawing.Size(124, 23);
+            this.txtOfficer.TabIndex = 9;
             // 
             // btnSelectFile
             // 
@@ -151,12 +133,12 @@ namespace ite_485_project
             this.label5.TabIndex = 12;
             this.label5.Text = "Offender Name";
             // 
-            // textBox4
+            // txtOffender
             // 
-            this.textBox4.Location = new System.Drawing.Point(124, 76);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(124, 23);
-            this.textBox4.TabIndex = 13;
+            this.txtOffender.Location = new System.Drawing.Point(124, 76);
+            this.txtOffender.Name = "txtOffender";
+            this.txtOffender.Size = new System.Drawing.Size(124, 23);
+            this.txtOffender.TabIndex = 13;
             // 
             // ckWord
             // 
@@ -191,7 +173,7 @@ namespace ite_485_project
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 358);
+            this.label7.Location = new System.Drawing.Point(23, 325);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 15);
             this.label7.TabIndex = 17;
@@ -199,7 +181,7 @@ namespace ite_485_project
             // 
             // txtEvidenceName
             // 
-            this.txtEvidenceName.Location = new System.Drawing.Point(124, 350);
+            this.txtEvidenceName.Location = new System.Drawing.Point(124, 317);
             this.txtEvidenceName.Name = "txtEvidenceName";
             this.txtEvidenceName.Size = new System.Drawing.Size(124, 23);
             this.txtEvidenceName.TabIndex = 18;
@@ -263,16 +245,14 @@ namespace ite_485_project
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ckWord);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtOffender);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtFilePath);
             this.Controls.Add(this.btnSelectFile);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.txtEvidenceNo);
+            this.Controls.Add(this.txtOfficer);
             this.Controls.Add(this.ckImage);
             this.Controls.Add(this.ckPDF);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "NewCase";
@@ -287,16 +267,14 @@ namespace ite_485_project
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox ckPDF;
         private System.Windows.Forms.CheckBox ckImage;
-        private System.Windows.Forms.TextBox txtEvidenceNo;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtOfficer;
         private System.Windows.Forms.Button btnSelectFile;
         private System.Windows.Forms.TextBox txtFilePath;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtOffender;
         private System.Windows.Forms.CheckBox ckWord;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
