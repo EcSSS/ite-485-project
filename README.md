@@ -1,5 +1,4 @@
 # ITE-485 Project Documentation
-#
 * This project is for the ITE-485 end of degree demo class
 #
 # Criminal Investigation Information Storage System
