@@ -18,13 +18,7 @@ namespace ite_485_project
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 home = new Form1();
-            home.ShowDialog();
-            this.Close();
-        }
+       
 
         private void ClosedCases_Load(object sender, EventArgs e)
         {
@@ -42,6 +36,14 @@ namespace ite_485_project
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 home = new Form1();
+            home.ShowDialog();
+            this.Close();
         }
     }
 }

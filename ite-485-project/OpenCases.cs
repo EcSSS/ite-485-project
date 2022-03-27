@@ -66,7 +66,15 @@ namespace ite_485_project
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 string caseId = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
-                txtCaseNum.Text = caseId; 
+                string officerName = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                string offenderName = dataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
+                string caseStatus = dataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
+                txtCaseNum.Text = caseId;
+                txtOfficerName.Text = officerName;
+                txtOffenderName.Text = offenderName;
+                txtCaseStatus.Text = caseStatus;
+            
+                    
                 
             }
 

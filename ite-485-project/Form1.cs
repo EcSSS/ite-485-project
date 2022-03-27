@@ -57,5 +57,12 @@ namespace ite_485_project
             showCase3.ShowDialog();
             this.Close();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }
 }
