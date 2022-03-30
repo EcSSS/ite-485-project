@@ -32,7 +32,7 @@ namespace ite_485_project
             using (SqlConnection cn = GetConnection())
             {
                 
-                string query = "SELECT SNo,DisplayName,Extension FROM dbo.Documents WHERE CaseNum='" + txtCaseNo.Text +"'";
+                string query = "SELECT SNo,DisplayName,Extension,FileSize FROM dbo.Documents WHERE CaseNum='" + txtCaseNo.Text +"'";
                 SqlDataAdapter adp = new SqlDataAdapter(query, cn);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -51,6 +51,7 @@ namespace ite_485_project
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
                 InitialDirectory = @"C:\",
+                Filter = "Pdf Files|*.pdf|Image Files|*.bmp;*.jpg;*.png;",
                 Title = "Browse Files",
 
             };
@@ -131,7 +132,8 @@ namespace ite_485_project
                 string FileName = new FileInfo(filepath).Name;
                 string extn = new FileInfo(filepath).Extension;
                 long size = new FileInfo(filepath).Length;
-                string query = "INSERT INTO dbo.Documents(DisplayName,Extension,FileData,FileSize)VALUES(@DisplayName,@Extension,@FileData,@FileSize)";
+                string query = "IF EXISTS(SELECT CaseNum FROM dbo.Documents WHERE CaseNum='"+txtCaseNo.Text+"')INSERT INTO dbo.Documents(DisplayName,Extension,FileData,FileSize,CaseNum)VALUES(@DisplayName,@Extension,@FileData,@FileSize,@CaseNum)";
+                
 
 
                 using (SqlConnection cn = GetConnection())
@@ -141,15 +143,33 @@ namespace ite_485_project
                     cmd.Parameters.Add("@Extension", SqlDbType.VarChar).Value = extn;
                     cmd.Parameters.Add("@DisplayName", SqlDbType.VarChar).Value = FileName;
                     cmd.Parameters.Add("@FileSize", SqlDbType.BigInt).Value = size;
+                    cmd.Parameters.Add("@CaseNum", SqlDbType.Int).Value = txtCaseNo.Text;
+
                     cn.Open();
                     cmd.ExecuteNonQuery();
                 }
-                
+
+                dataGridView1.Update();
+                dataGridView1.Refresh();
 
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+       
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            string query = "UPDATE dbo.CaseInfo SET CaseStatus='"+0+"' WHERE CaseNum='"+txtCaseNo.Text+"'"; 
+            using (SqlConnection cn = GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand(query, cn);
+                //cmd.Parameters.Add("@CaseStatus", SqlDbType.Bit).Value = 0;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             Form1 home = new Form1();
@@ -157,6 +177,6 @@ namespace ite_485_project
             this.Close();
         }
 
-      
+        
     }
 }

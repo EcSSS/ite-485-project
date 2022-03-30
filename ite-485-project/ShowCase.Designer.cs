@@ -50,10 +50,11 @@ namespace ite_485_project
             this.txtEvidenceNo = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtFilePath = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@ namespace ite_485_project
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(60, 233);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 15);
@@ -92,6 +94,7 @@ namespace ite_485_project
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(59, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 15);
@@ -101,6 +104,7 @@ namespace ite_485_project
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(73, 674);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(167, 15);
@@ -110,6 +114,7 @@ namespace ite_485_project
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(73, 715);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 15);
@@ -127,6 +132,7 @@ namespace ite_485_project
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(161, 124);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(135, 40);
@@ -137,6 +143,7 @@ namespace ite_485_project
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label10.Location = new System.Drawing.Point(59, 558);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(337, 40);
@@ -154,6 +161,7 @@ namespace ite_485_project
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(893, 71);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(254, 40);
@@ -163,9 +171,11 @@ namespace ite_485_project
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(490, 124);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(1007, 708);
             this.dataGridView1.TabIndex = 32;
@@ -183,6 +193,7 @@ namespace ite_485_project
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(59, 265);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 15);
@@ -199,6 +210,7 @@ namespace ite_485_project
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(73, 633);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 15);
@@ -231,27 +243,16 @@ namespace ite_485_project
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button4.Location = new System.Drawing.Point(1525, 13);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(27, 29);
-            this.button4.TabIndex = 40;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Bernard MT Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label11.Location = new System.Drawing.Point(12, 9);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 25);
             this.label11.TabIndex = 41;
             this.label11.Text = "CIISS";
-
             // 
             // txtFilePath
             // 
@@ -270,16 +271,41 @@ namespace ite_485_project
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button4.Location = new System.Drawing.Point(1518, 9);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(34, 37);
+            this.button4.TabIndex = 44;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(150, 314);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(146, 23);
+            this.btnClose.TabIndex = 45;
+            this.btnClose.Text = "Close Case";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // ShowCase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1564, 902);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtFilePath);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtEvidenceNo);
@@ -300,7 +326,10 @@ namespace ite_485_project
             this.Controls.Add(this.txtCaseNo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ShowCase";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShowCase";
             this.Load += new System.EventHandler(this.ShowCase_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -331,9 +360,10 @@ namespace ite_485_project
         private System.Windows.Forms.TextBox txtEvidenceNo;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtFilePath;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnClose;
     }
 }

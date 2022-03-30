@@ -45,6 +45,7 @@ namespace ite_485_project
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.txttest = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -86,7 +87,7 @@ namespace ite_485_project
             this.txtOfficer.Location = new System.Drawing.Point(124, 46);
             this.txtOfficer.Name = "txtOfficer";
             this.txtOfficer.Size = new System.Drawing.Size(124, 23);
-            this.txtOfficer.TabIndex = 9;
+            this.txtOfficer.TabIndex = 1;
             // 
             // btnSelectFile
             // 
@@ -108,7 +109,7 @@ namespace ite_485_project
             this.txtFilePath.Location = new System.Drawing.Point(124, 252);
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.Size = new System.Drawing.Size(318, 23);
-            this.txtFilePath.TabIndex = 11;
+            this.txtFilePath.TabIndex = 3;
             // 
             // label5
             // 
@@ -125,7 +126,7 @@ namespace ite_485_project
             this.txtOffender.Location = new System.Drawing.Point(124, 76);
             this.txtOffender.Name = "txtOffender";
             this.txtOffender.Size = new System.Drawing.Size(124, 23);
-            this.txtOffender.TabIndex = 13;
+            this.txtOffender.TabIndex = 2;
             // 
             // label6
             // 
@@ -197,12 +198,20 @@ namespace ite_485_project
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // txttest
+            // 
+            this.txttest.Location = new System.Drawing.Point(18, 320);
+            this.txttest.Name = "txttest";
+            this.txttest.Size = new System.Drawing.Size(100, 23);
+            this.txttest.TabIndex = 24;
+            // 
             // NewCase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(462, 372);
+            this.Controls.Add(this.txttest);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.timePicker);
@@ -245,5 +254,6 @@ namespace ite_485_project
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txttest;
     }
 }

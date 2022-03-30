@@ -13,9 +13,13 @@ using System.Data.SqlTypes;
 namespace ite_485_project
 {
 
+
     public partial class NewCase : Form
     {
-        
+  
+        public static string SetValue2 = "";
+
+
         public NewCase()
         {
             InitializeComponent();
@@ -57,7 +61,7 @@ namespace ite_485_project
 
                 string officerName = txtOfficer.Text;
                 string offenderName = txtOffender.Text;
-                string query2 = "INSERT INTO dbo.CaseInfo(OfficerName,OffenderName)VALUES(@OfficerName,@OffenderName)";
+                string query2 = "INSERT INTO dbo.CaseInfo(OfficerName,OffenderName,CaseStatus)VALUES(@OfficerName,@OffenderName,@CaseStatus)";
 
                 using (SqlConnection cn = GetConnection())
                 {
@@ -70,10 +74,37 @@ namespace ite_485_project
                     cn.Close();
                     
                 }
+                
+
+                
 
 
 
             }
+            string query3 = "SELECT MAX(CaseNum) FROM dbo.CaseInfo";
+            string test = txttest.Text;
+
+            using (SqlConnection cn = GetConnection())
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(query3, cn);
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    SetValue2 = da.GetValue(0).ToString();
+                }
+                cn.Close();
+            }
+
+            string query4 = "UPDATE dbo.Documents SET CaseNum='" + SetValue2 + "' WHERE SNo=(select max(SNo)From dbo.Documents)";
+            using (SqlConnection cn = GetConnection())
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(query4, cn);
+                cmd.ExecuteNonQuery();
+            }
+
+
         }
 
         private void btnSelectFile_Click(object sender, EventArgs e)

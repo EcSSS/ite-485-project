@@ -38,7 +38,8 @@ namespace ite_485_project
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+        private void button3_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             Form1 home = new Form1();

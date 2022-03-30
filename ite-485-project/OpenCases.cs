@@ -26,20 +26,12 @@ namespace ite_485_project
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dbo.CaseInfo", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM dbo.CaseInfo WHERE CaseStatus=1", sqlCon);
                 DataTable dtbl1 = new DataTable();
                 sqlDa.Fill(dtbl1);
 
                 dataGridView1.DataSource = dtbl1;
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 home = new Form1();
-            home.ShowDialog();
-            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,11 +46,6 @@ namespace ite_485_project
            
             ShowCase showcase = new ShowCase();
             showcase.Show();
-            
-
-
-
-
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -72,12 +59,20 @@ namespace ite_485_project
                 txtCaseNum.Text = caseId;
                 txtOfficerName.Text = officerName;
                 txtOffenderName.Text = offenderName;
-                txtCaseStatus.Text = caseStatus;
+
             
                     
                 
             }
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 home = new Form1();
+            home.ShowDialog();
+            this.Close();
         }
     }
 }
