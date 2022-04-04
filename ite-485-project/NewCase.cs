@@ -113,7 +113,7 @@ namespace ite_485_project
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
                 InitialDirectory = @"C:\",
-                Filter = "Pdf Files|*.pdf|Image Files|*.bmp;*.jpg;*.gif;*.png;*.tif",
+                Filter = "Pdf Files|*.pdf|Image Files|*.bmp;*.jpg;*.gif;*.png;*.tif|Word| *.docx",
                 Title = "Browse Files",
                 
 

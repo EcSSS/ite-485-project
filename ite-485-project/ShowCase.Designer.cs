@@ -37,7 +37,7 @@ namespace ite_485_project
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtOfficerName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -69,8 +69,10 @@ namespace ite_485_project
             // 
             // txtOffenderName
             // 
+            this.txtOffenderName.Enabled = false;
             this.txtOffenderName.Location = new System.Drawing.Point(206, 229);
             this.txtOffenderName.Name = "txtOffenderName";
+            this.txtOffenderName.ReadOnly = true;
             this.txtOffenderName.Size = new System.Drawing.Size(178, 23);
             this.txtOffenderName.TabIndex = 21;
             // 
@@ -86,8 +88,10 @@ namespace ite_485_project
             // 
             // txtCaseNo
             // 
+            this.txtCaseNo.Enabled = false;
             this.txtCaseNo.Location = new System.Drawing.Point(206, 197);
             this.txtCaseNo.Name = "txtCaseNo";
+            this.txtCaseNo.ReadOnly = true;
             this.txtCaseNo.Size = new System.Drawing.Size(178, 23);
             this.txtCaseNo.TabIndex = 17;
             // 
@@ -107,9 +111,9 @@ namespace ite_485_project
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(73, 674);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 15);
+            this.label6.Size = new System.Drawing.Size(159, 15);
             this.label6.TabIndex = 22;
-            this.label6.Text = "Person Checking Evidence out";
+            this.label6.Text = "Person Viewing Evidence out";
             // 
             // label7
             // 
@@ -121,12 +125,12 @@ namespace ite_485_project
             this.label7.TabIndex = 23;
             this.label7.Text = "Date/Time";
             // 
-            // textBox7
+            // txtOfficerName
             // 
-            this.textBox7.Location = new System.Drawing.Point(260, 666);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(124, 23);
-            this.textBox7.TabIndex = 25;
+            this.txtOfficerName.Location = new System.Drawing.Point(260, 666);
+            this.txtOfficerName.Name = "txtOfficerName";
+            this.txtOfficerName.Size = new System.Drawing.Size(124, 23);
+            this.txtOfficerName.TabIndex = 25;
             // 
             // label9
             // 
@@ -179,6 +183,7 @@ namespace ite_485_project
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(1007, 708);
             this.dataGridView1.TabIndex = 32;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // button1
             // 
@@ -202,8 +207,10 @@ namespace ite_485_project
             // 
             // txtCaseStatus
             // 
+            this.txtCaseStatus.Enabled = false;
             this.txtCaseStatus.Location = new System.Drawing.Point(273, 267);
             this.txtCaseStatus.Name = "txtCaseStatus";
+            this.txtCaseStatus.ReadOnly = true;
             this.txtCaseStatus.Size = new System.Drawing.Size(111, 23);
             this.txtCaseStatus.TabIndex = 35;
             // 
@@ -219,6 +226,7 @@ namespace ite_485_project
             // 
             // txtEvidenceNo
             // 
+            this.txtEvidenceNo.Enabled = false;
             this.txtEvidenceNo.Location = new System.Drawing.Point(260, 625);
             this.txtEvidenceNo.Name = "txtEvidenceNo";
             this.txtEvidenceNo.Size = new System.Drawing.Size(124, 23);
@@ -242,6 +250,7 @@ namespace ite_485_project
             this.button3.TabIndex = 39;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label11
             // 
@@ -318,7 +327,7 @@ namespace ite_485_project
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtOfficerName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtOffenderName);
@@ -347,7 +356,7 @@ namespace ite_485_project
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtOfficerName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

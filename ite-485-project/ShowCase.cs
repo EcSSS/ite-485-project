@@ -98,20 +98,45 @@ namespace ite_485_project
                     var data = (byte[])reader["FileData"];
                     var extn = reader["Extension"].ToString();
                     var newFileName = name.Replace(extn, DateTime.Now.ToString("ddMMyyyyhhmmss")) + extn;
-                    string filepath = @"C:\Users\erics\Downloads\" + name + ".pdf";
-
-                    FS = new FileStream(filepath, System.IO.FileMode.Create);
-
-                    FS.Write(data, 0, data.Length);
-                    FS.Close();
-
-                    string adobeReaderPath = @"C:\Program Files\Adobe\Acrobat DC\Acrobat\Acrobat.exe";
-
-                    System.Diagnostics.Process.Start(adobeReaderPath, filepath);
-
-                    
                     
 
+                    if (extn == ".pdf")
+                    {
+                       string filepath = @"C:\Users\erics\Downloads\" + name + ".pdf";
+                        FS = new FileStream(filepath, System.IO.FileMode.Create);
+
+                        FS.Write(data, 0, data.Length);
+                        FS.Close();
+
+                        string adobeReaderPath = @"C:\Program Files\Adobe\Acrobat DC\Acrobat\Acrobat.exe";
+
+                        System.Diagnostics.Process.Start(adobeReaderPath, filepath);
+                    }
+                    if(extn == ".docx")
+                    {
+                        string filepath = @"C:\Users\erics\Downloads\" + name + ".docx";
+                        FS = new FileStream(filepath, System.IO.FileMode.Create);
+
+                        FS.Write(data, 0, data.Length);
+                        FS.Close();
+
+                        string wordReaderPath = @"C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE";
+
+                        System.Diagnostics.Process.Start(wordReaderPath, filepath);
+                    }       
+                    if(extn == ".jpg")
+                    {
+                        string filepath = @"C:\Users\erics\Downloads\" + name + ".jpg";
+                        FS = new FileStream(filepath, System.IO.FileMode.Create);
+
+                        FS.Write(data, 0, data.Length);
+                        FS.Close();
+
+                        string imageReaderPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
+
+                        System.Diagnostics.Process.Start(imageReaderPath, filepath);
+                    }
+                    
                 }
 
             }
@@ -123,36 +148,44 @@ namespace ite_485_project
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string filepath = txtFilePath.Text;
-
-            using (Stream stream = File.OpenRead(filepath))
+            try
             {
-                byte[] buffer = new byte[stream.Length];
-                stream.Read(buffer, 0, buffer.Length);
-                string FileName = new FileInfo(filepath).Name;
-                string extn = new FileInfo(filepath).Extension;
-                long size = new FileInfo(filepath).Length;
-                string query = "IF EXISTS(SELECT CaseNum FROM dbo.Documents WHERE CaseNum='"+txtCaseNo.Text+"')INSERT INTO dbo.Documents(DisplayName,Extension,FileData,FileSize,CaseNum)VALUES(@DisplayName,@Extension,@FileData,@FileSize,@CaseNum)";
-                
+                string filepath = txtFilePath.Text;
 
-
-                using (SqlConnection cn = GetConnection())
+                using (Stream stream = File.OpenRead(filepath))
                 {
-                    SqlCommand cmd = new SqlCommand(query, cn);
-                    cmd.Parameters.Add("@FileData", SqlDbType.VarBinary).Value = buffer;
-                    cmd.Parameters.Add("@Extension", SqlDbType.VarChar).Value = extn;
-                    cmd.Parameters.Add("@DisplayName", SqlDbType.VarChar).Value = FileName;
-                    cmd.Parameters.Add("@FileSize", SqlDbType.BigInt).Value = size;
-                    cmd.Parameters.Add("@CaseNum", SqlDbType.Int).Value = txtCaseNo.Text;
+                    byte[] buffer = new byte[stream.Length];
+                    stream.Read(buffer, 0, buffer.Length);
+                    string FileName = new FileInfo(filepath).Name;
+                    string extn = new FileInfo(filepath).Extension;
+                    long size = new FileInfo(filepath).Length;
+                    string query = "IF EXISTS(SELECT CaseNum FROM dbo.Documents WHERE CaseNum='" + txtCaseNo.Text + "')INSERT INTO dbo.Documents(DisplayName,Extension,FileData,FileSize,CaseNum)VALUES(@DisplayName,@Extension,@FileData,@FileSize,@CaseNum)";
 
-                    cn.Open();
-                    cmd.ExecuteNonQuery();
+
+
+                    using (SqlConnection cn = GetConnection())
+                    {
+                        SqlCommand cmd = new SqlCommand(query, cn);
+                        cmd.Parameters.Add("@FileData", SqlDbType.VarBinary).Value = buffer;
+                        cmd.Parameters.Add("@Extension", SqlDbType.VarChar).Value = extn;
+                        cmd.Parameters.Add("@DisplayName", SqlDbType.VarChar).Value = FileName;
+                        cmd.Parameters.Add("@FileSize", SqlDbType.BigInt).Value = size;
+                        cmd.Parameters.Add("@CaseNum", SqlDbType.Int).Value = txtCaseNo.Text;
+
+                        cn.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+
+
+
                 }
-
-                dataGridView1.Update();
-                dataGridView1.Refresh();
-
             }
+            catch(Exception)
+            {
+                MessageBox.Show("Error during save state. Please try again.");
+            }
+
+           
         }
 
        
@@ -177,6 +210,35 @@ namespace ite_485_project
             this.Close();
         }
 
-        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string query = "IF EXISTS(SELECT SNo FROM dbo.ChainOfCustody WHERE SNo='" + txtEvidenceNo.Text + "')INSERT INTO dbo.ChainOfCustody(SNo,OfficerName,Date)VALUES(@SNo,@OfficerName,@Date)";
+
+
+
+            using (SqlConnection cn = GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.Parameters.Add("@SNo", SqlDbType.Int).Value = txtEvidenceNo.Text;
+                cmd.Parameters.Add("@OfficerName", SqlDbType.VarChar).Value = txtOfficerName.Text;
+                cmd.Parameters.Add("@Date", SqlDbType.DateTime).Value = dateTimePicker1.Value;
+
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string EvidenceNo = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
+                txtEvidenceNo.Text = EvidenceNo;
+            }
+
+            
+            
+        }
     }
 }
