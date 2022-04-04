@@ -3,6 +3,9 @@
 # ITE-485 Project Documentation
 * This project is for the ITE-485 end of degree demo class
 #
+
+
+
 # Notes to mention
   * Due the the nature of the timeframe given, some decision about the functionality were made in order to make sure the project would be finished in time
   
@@ -10,4 +13,10 @@
   
   * Since the entire nature of this project surrounds cloud storage you must have an azure database setup and running and must update the code in order to get the system to work. Documentation on how to change the code to use with your pre existing database will come soon
   
+  
+  
+  # Installation Notes
+  
   * Adobe acrobat must be installed on the host system and should be installed on this path for it to work without updating the path in the back end "C:\Program Files\Adobe\Acrobat DC\Acrobat\Acrobat.exe"
+  * Word must be installed on the host system in order to open files in the system it should also be installed in this path "C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE".
+  * FireFox must also be installed to open the image files. It needs to be installed in on this path "C:\Program Files\Mozilla Firefox\firefox.exe".
