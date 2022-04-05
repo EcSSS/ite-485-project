@@ -24,7 +24,12 @@ namespace ite_485_project
 
         private void ShowCase_Load(object sender, EventArgs e)
         {
-            
+            timePicker = new DateTimePicker();
+            timePicker.Format = DateTimePickerFormat.Time;
+            timePicker.ShowUpDown = true;
+            timePicker.Location = new Point(1487, 856);
+            timePicker.Width = 1;   
+            Controls.Add(timePicker);
 
             txtCaseNo.Text = OpenCases.SetValue;
 
@@ -32,7 +37,7 @@ namespace ite_485_project
             using (SqlConnection cn = GetConnection())
             {
                 
-                string query = "SELECT SNo,DisplayName,Extension,FileSize FROM dbo.Documents WHERE CaseNum='" + txtCaseNo.Text +"'";
+                string query = "SELECT SNo,DisplayName,Extension,FileSize,UploadDate,Time FROM dbo.Documents WHERE CaseNum='" + txtCaseNo.Text +"'";
                 SqlDataAdapter adp = new SqlDataAdapter(query, cn);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -51,7 +56,7 @@ namespace ite_485_project
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
                 InitialDirectory = @"C:\",
-                Filter = "Pdf Files|*.pdf|Image Files|*.bmp;*.jpg;*.png;",
+                Filter = "Pdf Files|*.pdf|Image Files|*.bmp;*.jpg;*.png;|Word Files|*.docx",
                 Title = "Browse Files",
 
             };
@@ -80,65 +85,72 @@ namespace ite_485_project
         private void OpenFile(int id)
         {
 
-
-
-            using (SqlConnection cn = GetConnection())
+            try
             {
-                FileStream FS = null;
-                
-                string query = "SELECT FileData,DisplayName,Extension FROM dbo.Documents WHERE SNo=@SNo";
-                SqlCommand cmd = new SqlCommand(query, cn);
-                cmd.Parameters.Add("@SNo", SqlDbType.Int).Value = id;
-                cn.Open();
 
-                var reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (SqlConnection cn = GetConnection())
                 {
-                    var name = reader["DisplayName"].ToString();
-                    var data = (byte[])reader["FileData"];
-                    var extn = reader["Extension"].ToString();
-                    var newFileName = name.Replace(extn, DateTime.Now.ToString("ddMMyyyyhhmmss")) + extn;
-                    
+                    FileStream FS = null;
 
-                    if (extn == ".pdf")
+                    string query = "SELECT FileData,DisplayName,Extension FROM dbo.Documents WHERE SNo=@SNo";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.Add("@SNo", SqlDbType.Int).Value = id;
+                    cn.Open();
+
+                    var reader = cmd.ExecuteReader();
+                    if (reader.Read())
                     {
-                       string filepath = @"C:\Users\erics\Downloads\" + name + ".pdf";
-                        FS = new FileStream(filepath, System.IO.FileMode.Create);
+                        var name = reader["DisplayName"].ToString();
+                        var data = (byte[])reader["FileData"];
+                        var extn = reader["Extension"].ToString();
+                        var newFileName = name.Replace(extn, DateTime.Now.ToString("ddMMyyyyhhmmss")) + extn;
 
-                        FS.Write(data, 0, data.Length);
-                        FS.Close();
 
-                        string adobeReaderPath = @"C:\Program Files\Adobe\Acrobat DC\Acrobat\Acrobat.exe";
+                        if (extn == ".pdf")
+                        {
+                            string filepath = @"C:\Users\erics\Downloads\" + name + ".pdf";
+                            FS = new FileStream(filepath, System.IO.FileMode.Create);
 
-                        System.Diagnostics.Process.Start(adobeReaderPath, filepath);
+                            FS.Write(data, 0, data.Length);
+                            FS.Close();
+
+                            string adobeReaderPath = @"C:\Program Files\Adobe\Acrobat DC\Acrobat\Acrobat.exe";
+
+                            System.Diagnostics.Process.Start(adobeReaderPath, filepath);
+                        }
+                        if (extn == ".docx")
+                        {
+                            string filepath = @"C:\Users\erics\Downloads\" + name + ".docx";
+                            FS = new FileStream(filepath, System.IO.FileMode.Create);
+
+                            FS.Write(data, 0, data.Length);
+                            FS.Close();
+
+                            string wordReaderPath = @"C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE";
+
+                            System.Diagnostics.Process.Start(wordReaderPath, filepath);
+                        }
+                        if (extn == ".jpg")
+                        {
+                            string filepath = @"C:\Users\erics\Downloads\" + name + ".jpg";
+                            FS = new FileStream(filepath, System.IO.FileMode.Create);
+
+                            FS.Write(data, 0, data.Length);
+                            FS.Close();
+
+                            string imageReaderPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
+
+                            System.Diagnostics.Process.Start(imageReaderPath, filepath);
+                        }
+
                     }
-                    if(extn == ".docx")
-                    {
-                        string filepath = @"C:\Users\erics\Downloads\" + name + ".docx";
-                        FS = new FileStream(filepath, System.IO.FileMode.Create);
 
-                        FS.Write(data, 0, data.Length);
-                        FS.Close();
-
-                        string wordReaderPath = @"C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE";
-
-                        System.Diagnostics.Process.Start(wordReaderPath, filepath);
-                    }       
-                    if(extn == ".jpg")
-                    {
-                        string filepath = @"C:\Users\erics\Downloads\" + name + ".jpg";
-                        FS = new FileStream(filepath, System.IO.FileMode.Create);
-
-                        FS.Write(data, 0, data.Length);
-                        FS.Close();
-
-                        string imageReaderPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
-
-                        System.Diagnostics.Process.Start(imageReaderPath, filepath);
-                    }
-                    
                 }
-
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error during open file sequence");
+                return;
             }
         }
         private SqlConnection GetConnection()
@@ -148,18 +160,19 @@ namespace ite_485_project
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            try
-            {
+                
                 string filepath = txtFilePath.Text;
 
                 using (Stream stream = File.OpenRead(filepath))
                 {
+                    string time = timePicker.Text;
+                    string date = dtDate.Text;
                     byte[] buffer = new byte[stream.Length];
                     stream.Read(buffer, 0, buffer.Length);
                     string FileName = new FileInfo(filepath).Name;
                     string extn = new FileInfo(filepath).Extension;
                     long size = new FileInfo(filepath).Length;
-                    string query = "IF EXISTS(SELECT CaseNum FROM dbo.Documents WHERE CaseNum='" + txtCaseNo.Text + "')INSERT INTO dbo.Documents(DisplayName,Extension,FileData,FileSize,CaseNum)VALUES(@DisplayName,@Extension,@FileData,@FileSize,@CaseNum)";
+                    string query = "IF EXISTS(SELECT CaseNum FROM dbo.Documents WHERE CaseNum='" + txtCaseNo.Text + "')INSERT INTO dbo.Documents(DisplayName,Extension,FileData,FileSize,CaseNum,UploadDate,Time)VALUES(@DisplayName,@Extension,@FileData,@FileSize,@CaseNum,@UploadDate,@Time)";
 
 
 
@@ -171,6 +184,8 @@ namespace ite_485_project
                         cmd.Parameters.Add("@DisplayName", SqlDbType.VarChar).Value = FileName;
                         cmd.Parameters.Add("@FileSize", SqlDbType.BigInt).Value = size;
                         cmd.Parameters.Add("@CaseNum", SqlDbType.Int).Value = txtCaseNo.Text;
+                        cmd.Parameters.Add("@UploadDate", SqlDbType.DateTime).Value = date;
+                        cmd.Parameters.Add("@Time", SqlDbType.VarChar).Value = time;
 
                         cn.Open();
                         cmd.ExecuteNonQuery();
@@ -179,13 +194,45 @@ namespace ite_485_project
 
 
                 }
-            }
-            catch(Exception)
+
+            string officerName2 = txtOfficerNameCheckout.Text;
+            string date2 = dtDate.Text;
+
+            string query5 = "SELECT MAX(SNo) FROM dbo.Documents";
+            using (SqlConnection cn = GetConnection())
             {
-                MessageBox.Show("Error during save state. Please try again.");
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(query5, cn);
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    txtControlSNo.Text = da.GetValue(0).ToString();
+                }
+                cn.Close();
             }
 
-           
+
+            string query6 = "INSERT INTO dbo.ChainOfCustody(SNo,Date,Time,EvidenceName)VALUES(@SNo,@Date,@Time,@EvidenceName)";
+            using (SqlConnection cn = GetConnection())
+            {
+                string filepath2 = txtFilePath.Text;
+                string FileName = new FileInfo(filepath).Name;
+
+                SqlCommand cmd = new SqlCommand(query6, cn);
+                //cmd.Parameters.Add("@OfficerName", SqlDbType.VarChar).Value = officerName2;
+                cmd.Parameters.Add("@Date", SqlDbType.DateTime).Value = date2;
+                cmd.Parameters.Add("@SNo", SqlDbType.Int).Value = txtControlSNo.Text;
+                cmd.Parameters.Add("@EvidenceName", SqlDbType.VarChar).Value = FileName;
+                cmd.Parameters.Add("@Time", SqlDbType.Char).Value = timePicker.Text;
+
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+
+            }
+
+
         }
 
        
@@ -212,21 +259,30 @@ namespace ite_485_project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string query = "IF EXISTS(SELECT SNo FROM dbo.ChainOfCustody WHERE SNo='" + txtEvidenceNo.Text + "')INSERT INTO dbo.ChainOfCustody(SNo,OfficerName,Date)VALUES(@SNo,@OfficerName,@Date)";
+            string query = "IF EXISTS(SELECT SNo FROM dbo.ChainOfCustody WHERE SNo='" + txtEvidenceNo.Text + "')INSERT INTO dbo.ChainOfCustody(SNo,OfficerName,Date,Time,EvidenceName)VALUES(@SNo,@OfficerName,@Date,@Time,@EvidenceName)";
 
+            string time = timePicker.Text;
 
 
             using (SqlConnection cn = GetConnection())
             {
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.Parameters.Add("@SNo", SqlDbType.Int).Value = txtEvidenceNo.Text;
-                cmd.Parameters.Add("@OfficerName", SqlDbType.VarChar).Value = txtOfficerName.Text;
-                cmd.Parameters.Add("@Date", SqlDbType.DateTime).Value = dateTimePicker1.Value;
+                cmd.Parameters.Add("@OfficerName", SqlDbType.VarChar).Value = txtOfficerNameCheckout.Text;
+                cmd.Parameters.Add("@Date", SqlDbType.DateTime).Value = dateTimePicker1.Text;
+                cmd.Parameters.Add("@Time", SqlDbType.VarChar).Value = time;
+
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    string EvidenceName = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                    cmd.Parameters.Add("@EvidenceName", SqlDbType.VarChar).Value = EvidenceName;
+                }
 
 
                 cn.Open();
                 cmd.ExecuteNonQuery();
             }
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

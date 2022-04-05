@@ -16,7 +16,8 @@ namespace ite_485_project
 
     public partial class NewCase : Form
     {
-  
+        
+
         public static string SetValue2 = "";
 
 
@@ -37,14 +38,15 @@ namespace ite_485_project
 
             using (Stream stream = File.OpenRead(filepath))
             {
-                
-                
+
+                string date = dtDate.Text;
+                string time = timePicker.Text;
                 byte[] buffer = new byte[stream.Length];
                 stream.Read(buffer, 0, buffer.Length);
                 string FileName = new FileInfo(filepath).Name;
                 string extn = new FileInfo(filepath).Extension;
                 long size = new FileInfo(filepath).Length;
-                string query = "INSERT INTO dbo.Documents(FileData,Extension,DisplayName,FileSize)VALUES(@FileData,@Extension,@DisplayName,@FileSize)";
+                string query = "INSERT INTO dbo.Documents(FileData,Extension,DisplayName,FileSize,UploadDate,Time)VALUES(@FileData,@Extension,@DisplayName,@FileSize,@UploadDate,@Time)";
                 
 
                 using (SqlConnection cn = GetConnection())
@@ -54,6 +56,8 @@ namespace ite_485_project
                     cmd.Parameters.Add("@Extension", SqlDbType.VarChar).Value = extn;
                     cmd.Parameters.Add("@DisplayName", SqlDbType.VarChar).Value = FileName;
                     cmd.Parameters.Add("@FileSize", SqlDbType.BigInt).Value = size;
+                    cmd.Parameters.Add("@UploadDate", SqlDbType.DateTime).Value = date;
+                    cmd.Parameters.Add("@Time", SqlDbType.Char).Value = time;
                     cn.Open();
                     cmd.ExecuteNonQuery();
                     cn.Close();
@@ -61,7 +65,7 @@ namespace ite_485_project
 
                 string officerName = txtOfficer.Text;
                 string offenderName = txtOffender.Text;
-                string query2 = "INSERT INTO dbo.CaseInfo(OfficerName,OffenderName,CaseStatus)VALUES(@OfficerName,@OffenderName,@CaseStatus)";
+                string query2 = "INSERT INTO dbo.CaseInfo(OfficerName,OffenderName,CaseStatus,Date,Time)VALUES(@OfficerName,@OffenderName,@CaseStatus,@Date,@Time)";
 
                 using (SqlConnection cn = GetConnection())
                 {
@@ -69,17 +73,14 @@ namespace ite_485_project
                     cmd.Parameters.Add("@OfficerName", SqlDbType.VarChar).Value = officerName;
                     cmd.Parameters.Add("@OffenderName", SqlDbType.VarChar).Value = offenderName;
                     cmd.Parameters.Add("CaseStatus", SqlDbType.SmallInt).Value = 1;
+                    cmd.Parameters.Add("@Date", SqlDbType.DateTime).Value = date;
+                    cmd.Parameters.Add("@Time", SqlDbType.Char).Value = time;
                     cn.Open();
                     cmd.ExecuteNonQuery();
                     cn.Close();
                     
                 }
                 
-
-                
-
-
-
             }
             string query3 = "SELECT MAX(CaseNum) FROM dbo.CaseInfo";
             string test = txttest.Text;
@@ -102,6 +103,46 @@ namespace ite_485_project
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(query4, cn);
                 cmd.ExecuteNonQuery();
+
+            }
+
+            string officerName2 = txtOfficer.Text;
+            string date2 = dtDate.Text;
+
+            string query5 = "SELECT MAX(SNo) FROM dbo.Documents";
+            using (SqlConnection cn = GetConnection())
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(query5, cn);
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    txtsno.Text = da.GetValue(0).ToString();
+                }
+                cn.Close();
+            }
+
+
+            string query6 = "INSERT INTO dbo.ChainOfCustody(SNo,OfficerName,Date,Time,EvidenceName)VALUES(@SNo,@OfficerName,@Date,@Time,@EvidenceName)";
+            using (SqlConnection cn = GetConnection())
+            {
+                string filepath2 = txtFilePath.Text;
+                string FileName = new FileInfo(filepath).Name;
+
+
+
+                SqlCommand cmd = new SqlCommand(query6, cn);
+                cmd.Parameters.Add("@OfficerName", SqlDbType.VarChar).Value = officerName2;
+                cmd.Parameters.Add("@Date", SqlDbType.DateTime).Value = date2;
+                cmd.Parameters.Add("@SNo", SqlDbType.Int).Value = txtsno.Text;
+                cmd.Parameters.Add("@EvidenceName", SqlDbType.VarChar).Value = FileName;
+                cmd.Parameters.Add("@Time", SqlDbType.Char).Value = timePicker.Text;
+
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+
             }
 
 

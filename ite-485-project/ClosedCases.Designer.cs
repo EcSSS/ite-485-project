@@ -36,9 +36,9 @@ namespace ite_485_project
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtOffenderName = new System.Windows.Forms.TextBox();
+            this.txtOfficerName = new System.Windows.Forms.TextBox();
+            this.txtCaseNum = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
@@ -105,26 +105,26 @@ namespace ite_485_project
             this.label6.TabIndex = 24;
             this.label6.Text = "Case Number";
             // 
-            // textBox3
+            // txtOffenderName
             // 
-            this.textBox3.Location = new System.Drawing.Point(171, 328);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(143, 23);
-            this.textBox3.TabIndex = 22;
+            this.txtOffenderName.Location = new System.Drawing.Point(171, 328);
+            this.txtOffenderName.Name = "txtOffenderName";
+            this.txtOffenderName.Size = new System.Drawing.Size(143, 23);
+            this.txtOffenderName.TabIndex = 22;
             // 
-            // textBox2
+            // txtOfficerName
             // 
-            this.textBox2.Location = new System.Drawing.Point(171, 283);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 23);
-            this.textBox2.TabIndex = 21;
+            this.txtOfficerName.Location = new System.Drawing.Point(171, 283);
+            this.txtOfficerName.Name = "txtOfficerName";
+            this.txtOfficerName.Size = new System.Drawing.Size(143, 23);
+            this.txtOfficerName.TabIndex = 21;
             // 
-            // textBox1
+            // txtCaseNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(171, 240);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(45, 23);
-            this.textBox1.TabIndex = 20;
+            this.txtCaseNum.Location = new System.Drawing.Point(171, 240);
+            this.txtCaseNum.Name = "txtCaseNum";
+            this.txtCaseNum.Size = new System.Drawing.Size(45, 23);
+            this.txtCaseNum.TabIndex = 20;
             // 
             // button1
             // 
@@ -147,6 +147,7 @@ namespace ite_485_project
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(443, 499);
             this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // button3
             // 
@@ -172,9 +173,9 @@ namespace ite_485_project
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtOffenderName);
+            this.Controls.Add(this.txtOfficerName);
+            this.Controls.Add(this.txtCaseNum);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
@@ -199,9 +200,9 @@ namespace ite_485_project
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOffenderName;
+        private System.Windows.Forms.TextBox txtOfficerName;
+        private System.Windows.Forms.TextBox txtCaseNum;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;

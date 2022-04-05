@@ -49,17 +49,17 @@ namespace ite_485_project
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(368, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 206);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(443, 499);
+            this.dataGridView1.Size = new System.Drawing.Size(814, 368);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(562, 580);
+            this.button1.Location = new System.Drawing.Point(376, 580);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 38);
             this.button1.TabIndex = 6;
@@ -69,21 +69,21 @@ namespace ite_485_project
             // 
             // txtCaseNum
             // 
-            this.txtCaseNum.Location = new System.Drawing.Point(156, 242);
+            this.txtCaseNum.Location = new System.Drawing.Point(137, 75);
             this.txtCaseNum.Name = "txtCaseNum";
             this.txtCaseNum.Size = new System.Drawing.Size(45, 23);
             this.txtCaseNum.TabIndex = 10;
             // 
             // txtOfficerName
             // 
-            this.txtOfficerName.Location = new System.Drawing.Point(156, 285);
+            this.txtOfficerName.Location = new System.Drawing.Point(137, 118);
             this.txtOfficerName.Name = "txtOfficerName";
             this.txtOfficerName.Size = new System.Drawing.Size(143, 23);
             this.txtOfficerName.TabIndex = 11;
             // 
             // txtOffenderName
             // 
-            this.txtOffenderName.Location = new System.Drawing.Point(156, 330);
+            this.txtOffenderName.Location = new System.Drawing.Point(137, 163);
             this.txtOffenderName.Name = "txtOffenderName";
             this.txtOffenderName.Size = new System.Drawing.Size(143, 23);
             this.txtOffenderName.TabIndex = 12;
@@ -92,7 +92,7 @@ namespace ite_485_project
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(43, 245);
+            this.label1.Location = new System.Drawing.Point(24, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 15);
             this.label1.TabIndex = 14;
@@ -102,7 +102,7 @@ namespace ite_485_project
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(43, 288);
+            this.label2.Location = new System.Drawing.Point(24, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 15);
             this.label2.TabIndex = 15;
@@ -112,7 +112,7 @@ namespace ite_485_project
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(43, 333);
+            this.label3.Location = new System.Drawing.Point(24, 166);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 15);
             this.label3.TabIndex = 16;

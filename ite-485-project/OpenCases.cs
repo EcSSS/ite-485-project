@@ -59,10 +59,6 @@ namespace ite_485_project
                 txtCaseNum.Text = caseId;
                 txtOfficerName.Text = officerName;
                 txtOffenderName.Text = offenderName;
-
-            
-                    
-                
             }
 
         }

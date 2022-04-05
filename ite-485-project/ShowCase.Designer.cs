@@ -37,7 +37,7 @@ namespace ite_485_project
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtOfficerName = new System.Windows.Forms.TextBox();
+            this.txtOfficerNameCheckout = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +55,9 @@ namespace ite_485_project
             this.btnSave = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.dtDate = new System.Windows.Forms.DateTimePicker();
+            this.timePicker = new System.Windows.Forms.DateTimePicker();
+            this.txtControlSNo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +73,7 @@ namespace ite_485_project
             // txtOffenderName
             // 
             this.txtOffenderName.Enabled = false;
-            this.txtOffenderName.Location = new System.Drawing.Point(206, 229);
+            this.txtOffenderName.Location = new System.Drawing.Point(206, 226);
             this.txtOffenderName.Name = "txtOffenderName";
             this.txtOffenderName.ReadOnly = true;
             this.txtOffenderName.Size = new System.Drawing.Size(178, 23);
@@ -80,7 +83,7 @@ namespace ite_485_project
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(60, 233);
+            this.label5.Location = new System.Drawing.Point(60, 230);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 15);
             this.label5.TabIndex = 20;
@@ -125,12 +128,12 @@ namespace ite_485_project
             this.label7.TabIndex = 23;
             this.label7.Text = "Date/Time";
             // 
-            // txtOfficerName
+            // txtOfficerNameCheckout
             // 
-            this.txtOfficerName.Location = new System.Drawing.Point(260, 666);
-            this.txtOfficerName.Name = "txtOfficerName";
-            this.txtOfficerName.Size = new System.Drawing.Size(124, 23);
-            this.txtOfficerName.TabIndex = 25;
+            this.txtOfficerNameCheckout.Location = new System.Drawing.Point(260, 666);
+            this.txtOfficerNameCheckout.Name = "txtOfficerNameCheckout";
+            this.txtOfficerNameCheckout.Size = new System.Drawing.Size(124, 23);
+            this.txtOfficerNameCheckout.TabIndex = 25;
             // 
             // label9
             // 
@@ -199,7 +202,7 @@ namespace ite_485_project
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(59, 265);
+            this.label3.Location = new System.Drawing.Point(59, 262);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 34;
@@ -208,7 +211,7 @@ namespace ite_485_project
             // txtCaseStatus
             // 
             this.txtCaseStatus.Enabled = false;
-            this.txtCaseStatus.Location = new System.Drawing.Point(273, 267);
+            this.txtCaseStatus.Location = new System.Drawing.Point(273, 264);
             this.txtCaseStatus.Name = "txtCaseStatus";
             this.txtCaseStatus.ReadOnly = true;
             this.txtCaseStatus.Size = new System.Drawing.Size(111, 23);
@@ -296,7 +299,7 @@ namespace ite_485_project
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(150, 314);
+            this.btnClose.Location = new System.Drawing.Point(150, 311);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(146, 23);
             this.btnClose.TabIndex = 45;
@@ -304,12 +307,37 @@ namespace ite_485_project
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // dtDate
+            // 
+            this.dtDate.Location = new System.Drawing.Point(1487, 856);
+            this.dtDate.Name = "dtDate";
+            this.dtDate.Size = new System.Drawing.Size(10, 23);
+            this.dtDate.TabIndex = 46;
+            // 
+            // timePicker
+            // 
+            this.timePicker.Location = new System.Drawing.Point(1518, 854);
+            this.timePicker.Name = "timePicker";
+            this.timePicker.Size = new System.Drawing.Size(1, 23);
+            this.timePicker.TabIndex = 47;
+            this.timePicker.Value = new System.DateTime(2022, 4, 4, 19, 35, 0, 0);
+            this.timePicker.Visible = false;
+            // 
+            // txtControlSNo
+            // 
+            this.txtControlSNo.Location = new System.Drawing.Point(1362, 10);
+            this.txtControlSNo.Name = "txtControlSNo";
+            this.txtControlSNo.Size = new System.Drawing.Size(100, 23);
+            this.txtControlSNo.TabIndex = 48;
+            // 
             // ShowCase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1564, 902);
+            this.Controls.Add(this.txtControlSNo);
+            this.Controls.Add(this.timePicker);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnSave);
@@ -327,7 +355,7 @@ namespace ite_485_project
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtOfficerName);
+            this.Controls.Add(this.txtOfficerNameCheckout);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtOffenderName);
@@ -335,6 +363,7 @@ namespace ite_485_project
             this.Controls.Add(this.txtCaseNo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.dtDate);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ShowCase";
@@ -356,7 +385,7 @@ namespace ite_485_project
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtOfficerName;
+        private System.Windows.Forms.TextBox txtOfficerNameCheckout;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -374,5 +403,8 @@ namespace ite_485_project
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DateTimePicker dtDate;
+        private System.Windows.Forms.DateTimePicker timePicker;
+        private System.Windows.Forms.TextBox txtControlSNo;
     }
 }

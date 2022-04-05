@@ -33,11 +33,6 @@ namespace ite_485_project
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
 
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -45,6 +40,21 @@ namespace ite_485_project
             Form1 home = new Form1();
             home.ShowDialog();
             this.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string caseId = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
+                string officerName = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                string offenderName = dataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
+                string caseStatus = dataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
+                txtCaseNum.Text = caseId;
+                txtOfficerName.Text = officerName;
+                txtOffenderName.Text = offenderName;
+
+            }
         }
     }
 }

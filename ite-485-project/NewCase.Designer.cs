@@ -46,6 +46,7 @@ namespace ite_485_project
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.txttest = new System.Windows.Forms.TextBox();
+            this.txtsno = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -205,12 +206,20 @@ namespace ite_485_project
             this.txttest.Size = new System.Drawing.Size(100, 23);
             this.txttest.TabIndex = 24;
             // 
+            // txtsno
+            // 
+            this.txtsno.Location = new System.Drawing.Point(18, 320);
+            this.txtsno.Name = "txtsno";
+            this.txtsno.Size = new System.Drawing.Size(100, 23);
+            this.txtsno.TabIndex = 25;
+            // 
             // NewCase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(462, 372);
+            this.Controls.Add(this.txtsno);
             this.Controls.Add(this.txttest);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -255,5 +264,6 @@ namespace ite_485_project
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txttest;
+        private System.Windows.Forms.TextBox txtsno;
     }
 }
