@@ -16,40 +16,51 @@ namespace ite_485_project
 {
     public partial class ShowCase : Form
     {
-        
+      
         public ShowCase()
         {
             InitializeComponent();
         }
 
+
         private void ShowCase_Load(object sender, EventArgs e)
         {
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+
             timePicker = new DateTimePicker();
             timePicker.Format = DateTimePickerFormat.Time;
             timePicker.ShowUpDown = true;
             timePicker.Location = new Point(1487, 856);
-            timePicker.Width = 1;   
+            timePicker.Width = 1;
             Controls.Add(timePicker);
 
             txtCaseNo.Text = OpenCases.SetValue;
 
 
+
+
+
+
+
             using (SqlConnection cn = GetConnection())
             {
-                
-                string query = "SELECT SNo,DisplayName,Extension,FileSize,UploadDate,Time FROM dbo.Documents WHERE CaseNum='" + txtCaseNo.Text +"'";
+
+                string query = "SELECT SNo,DisplayName,Extension,FileSize,UploadDate,Time FROM dbo.Documents WHERE CaseNum='" + txtCaseNo.Text + "'";
                 SqlDataAdapter adp = new SqlDataAdapter(query, cn);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
 
-                if (dt.Rows.Count > 0)
-                {
-                   dataGridView1.DataSource = dt;
-                }
-                
+                dataGridView1.DataSource = dt;
+
+               
             }
 
-        }
+
+
+        }   
+            
+
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -293,8 +304,10 @@ namespace ite_485_project
                 txtEvidenceNo.Text = EvidenceNo;
             }
 
-            
-            
+
+
         }
+
+        
     }
 }
