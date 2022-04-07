@@ -45,18 +45,12 @@ namespace ite_485_project
         private void btnOpenCase_Click(object sender, EventArgs e)
         {
             this.Hide();
-            OpenCases opencase = new OpenCases();
+            ViewCases opencase = new ViewCases();
             opencase.ShowDialog();
             this.Close();
         }
 
-        private void btntest_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ShowCase showCase3 = new ShowCase();
-            showCase3.ShowDialog();
-            this.Close();
-        }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {

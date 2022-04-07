@@ -10,10 +10,13 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="NewCase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="OpenCases.cs">
+    <Compile Update="ViewCases.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ShowCase.cs">

@@ -16,7 +16,7 @@ namespace ite_485_project
 {
     public partial class ShowCase : Form
     {
-      
+        public static string SetValue2 = "";
         public ShowCase()
         {
             InitializeComponent();
@@ -25,6 +25,7 @@ namespace ite_485_project
 
         private void ShowCase_Load(object sender, EventArgs e)
         {
+
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
 
             timePicker = new DateTimePicker();
@@ -34,13 +35,9 @@ namespace ite_485_project
             timePicker.Width = 1;
             Controls.Add(timePicker);
 
-            txtCaseNo.Text = OpenCases.SetValue;
 
-
-
-
-
-
+            txtCaseNo.Text = ViewCases.SetValue;
+            
 
             using (SqlConnection cn = GetConnection())
             {
@@ -263,8 +260,8 @@ namespace ite_485_project
         private void button4_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 home = new Form1();
-            home.ShowDialog();
+            ViewCases openCases = new ViewCases();
+            openCases.ShowDialog();
             this.Close();
         }
 
@@ -308,6 +305,13 @@ namespace ite_485_project
 
         }
 
-        
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SetValue2 = txtEvidenceNo.Text;
+
+            Form2 home2 = new Form2();
+            home2.ShowDialog();
+
+        }
     }
 }

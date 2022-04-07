@@ -18,7 +18,6 @@ C:\Users\erics\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp
 C:\Users\erics\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.genruntimeconfig.cache
 C:\Users\erics\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.NewCase.resources
 C:\Users\erics\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.ClosedCases.resources
-C:\Users\erics\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.OpenCases.resources
 C:\Users\erics\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.ShowCase.resources
 C:\Users\erics\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 C:\Users\erics\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
@@ -34,3 +33,5 @@ C:\Users\erics\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp
 C:\Users\erics\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Memory.Data.dll
 C:\Users\erics\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
 C:\Users\erics\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\erics\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.Form2.resources
+C:\Users\erics\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.ViewCases.resources

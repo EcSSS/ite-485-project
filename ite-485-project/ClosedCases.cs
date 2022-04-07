@@ -18,10 +18,12 @@ namespace ite_485_project
             InitializeComponent();
         }
 
+        public static string SetValue = "";
        
 
         private void ClosedCases_Load(object sender, EventArgs e)
         {
+            
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
@@ -40,6 +42,9 @@ namespace ite_485_project
             Form1 home = new Form1();
             home.ShowDialog();
             this.Close();
+
+
+            
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -55,6 +60,14 @@ namespace ite_485_project
                 txtOffenderName.Text = offenderName;
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {       
+            SetValue = txtCaseNum.Text;
+
+            ShowCase showcase = new ShowCase();
+            showcase.Show();
         }
     }
 }

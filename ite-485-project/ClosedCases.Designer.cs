@@ -79,7 +79,7 @@ namespace ite_485_project
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(58, 331);
+            this.label2.Location = new System.Drawing.Point(24, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 15);
             this.label2.TabIndex = 26;
@@ -89,7 +89,7 @@ namespace ite_485_project
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(58, 286);
+            this.label5.Location = new System.Drawing.Point(24, 108);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 15);
             this.label5.TabIndex = 25;
@@ -99,7 +99,7 @@ namespace ite_485_project
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(58, 243);
+            this.label6.Location = new System.Drawing.Point(24, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 15);
             this.label6.TabIndex = 24;
@@ -107,33 +107,34 @@ namespace ite_485_project
             // 
             // txtOffenderName
             // 
-            this.txtOffenderName.Location = new System.Drawing.Point(171, 328);
+            this.txtOffenderName.Location = new System.Drawing.Point(137, 150);
             this.txtOffenderName.Name = "txtOffenderName";
             this.txtOffenderName.Size = new System.Drawing.Size(143, 23);
             this.txtOffenderName.TabIndex = 22;
             // 
             // txtOfficerName
             // 
-            this.txtOfficerName.Location = new System.Drawing.Point(171, 283);
+            this.txtOfficerName.Location = new System.Drawing.Point(137, 105);
             this.txtOfficerName.Name = "txtOfficerName";
             this.txtOfficerName.Size = new System.Drawing.Size(143, 23);
             this.txtOfficerName.TabIndex = 21;
             // 
             // txtCaseNum
             // 
-            this.txtCaseNum.Location = new System.Drawing.Point(171, 240);
+            this.txtCaseNum.Location = new System.Drawing.Point(137, 62);
             this.txtCaseNum.Name = "txtCaseNum";
             this.txtCaseNum.Size = new System.Drawing.Size(45, 23);
             this.txtCaseNum.TabIndex = 20;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(551, 570);
+            this.button1.Location = new System.Drawing.Point(374, 574);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 38);
             this.button1.TabIndex = 19;
             this.button1.Text = "Show Case";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -141,11 +142,11 @@ namespace ite_485_project
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(366, 65);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 191);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(443, 499);
+            this.dataGridView1.Size = new System.Drawing.Size(785, 373);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
