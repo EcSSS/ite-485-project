@@ -27,3 +27,10 @@
 
   * If you dont want to set the installations to these filepaths or dont have the ability ask IT to change the systems source code to your specific file paths for these programs.
 
+
+# Things I would add if I had more time
+
+* Login Feature
+* Seperating case files based on who they are assigned to
+
+
