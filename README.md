@@ -13,7 +13,7 @@
   
   * Since the entire nature of this project surrounds cloud storage you must have an azure database setup and running and must update the sourcecode in order to get the system to work. Documentation on how to change the code to use with your pre existing database will come soon
 
-  * For the current system, all case files that are submitted must not have spaces as the system will crash
+  * For the current system, all case files that are submitted must not have spaces in the names as the system will crash
   
   
   
