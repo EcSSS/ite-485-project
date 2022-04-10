@@ -80,14 +80,20 @@ namespace ite_485_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var selectedRow = dataGridView1.SelectedRows;
-            foreach (var row in selectedRow)
-            {
-                int id = (int)((DataGridViewRow)row).Cells[0].Value;
+            try {
+                var selectedRow = dataGridView1.SelectedRows;
+                foreach (var row in selectedRow)
+                {
+                    int id = (int)((DataGridViewRow)row).Cells[0].Value;
 
-                OpenFile(id);
+                    OpenFile(id);
+                }
             }
-            
+            catch (Exception)
+            {
+                MessageBox.Show("Error during open file sequence");
+                return;
+            }
 
         }
         private void OpenFile(int id)

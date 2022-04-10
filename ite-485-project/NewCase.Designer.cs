@@ -203,14 +203,15 @@ namespace ite_485_project
             // 
             this.txttest.Location = new System.Drawing.Point(18, 320);
             this.txttest.Name = "txttest";
-            this.txttest.Size = new System.Drawing.Size(100, 23);
+            this.txttest.Size = new System.Drawing.Size(1, 23);
             this.txttest.TabIndex = 24;
             // 
             // txtsno
             // 
+            this.txtsno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.txtsno.Location = new System.Drawing.Point(18, 320);
             this.txtsno.Name = "txtsno";
-            this.txtsno.Size = new System.Drawing.Size(100, 23);
+            this.txtsno.Size = new System.Drawing.Size(1, 23);
             this.txtsno.TabIndex = 25;
             // 
             // NewCase
