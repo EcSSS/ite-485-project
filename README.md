@@ -1,8 +1,8 @@
 # Criminal Investigation Information Storage System
-#
+
 # ITE-485 Project Documentation
 * This project is for the ITE-485 end of degree demo class
-#
+
 
 
 
@@ -11,7 +11,11 @@
   
   * All files uploaded to this system must either be converted to a pdf or image file prior to uploading or the system will not find them when in the upload section. Working around this will break the ability to view the file in the system and possibly crash the application
   
+  * For the current system build, all case files that are submitted must not have spaces in the names as the system will crash
+  
   * Since the entire nature of this project surrounds cloud storage you must have an azure database setup and running and must update the sourcecode in order to get the system to work. Documentation on how to change the code to use with your pre existing database will come soon
+
+  
   
   
   
@@ -24,4 +28,11 @@
   * Firefox must also be installed to open the image files. It needs to be installed in on this path "C:\Program Files\Mozilla Firefox\firefox.exe".
 
   * If you dont want to set the installations to these filepaths or dont have the ability ask IT to change the systems source code to your specific file paths for these programs.
+
+
+# Things I would add if I had more time
+
+* Login Feature
+* Seperating case files based on who they are assigned to
+
 
