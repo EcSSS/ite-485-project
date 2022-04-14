@@ -51,9 +51,9 @@ namespace ite_485_project
             this.btnNewCase.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnNewCase.Image = ((System.Drawing.Image)(resources.GetObject("btnNewCase.Image")));
             this.btnNewCase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewCase.Location = new System.Drawing.Point(26, 0);
+            this.btnNewCase.Location = new System.Drawing.Point(122, 21);
             this.btnNewCase.Name = "btnNewCase";
-            this.btnNewCase.Size = new System.Drawing.Size(187, 70);
+            this.btnNewCase.Size = new System.Drawing.Size(229, 70);
             this.btnNewCase.TabIndex = 0;
             this.btnNewCase.Text = "New Case";
             this.btnNewCase.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -67,9 +67,9 @@ namespace ite_485_project
             this.btnOpenCase.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnOpenCase.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenCase.Image")));
             this.btnOpenCase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOpenCase.Location = new System.Drawing.Point(26, 91);
+            this.btnOpenCase.Location = new System.Drawing.Point(122, 134);
             this.btnOpenCase.Name = "btnOpenCase";
-            this.btnOpenCase.Size = new System.Drawing.Size(187, 70);
+            this.btnOpenCase.Size = new System.Drawing.Size(229, 70);
             this.btnOpenCase.TabIndex = 1;
             this.btnOpenCase.Text = "View Cases";
             this.btnOpenCase.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -83,9 +83,9 @@ namespace ite_485_project
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(26, 181);
+            this.btnExit.Location = new System.Drawing.Point(122, 248);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(187, 67);
+            this.btnExit.Size = new System.Drawing.Size(229, 67);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -95,14 +95,14 @@ namespace ite_485_project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-9, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(444, 38);
+            this.panel1.Size = new System.Drawing.Size(617, 38);
             this.panel1.TabIndex = 7;
             // 
             // label5
@@ -110,9 +110,9 @@ namespace ite_485_project
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bernard MT Condensed", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(265, 8);
+            this.label5.Location = new System.Drawing.Point(418, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 17);
+            this.label5.Size = new System.Drawing.Size(88, 33);
             this.label5.TabIndex = 13;
             this.label5.Text = "System";
             // 
@@ -121,9 +121,9 @@ namespace ite_485_project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(21, 8);
+            this.label1.Location = new System.Drawing.Point(30, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 17);
+            this.label1.Size = new System.Drawing.Size(107, 33);
             this.label1.TabIndex = 9;
             this.label1.Text = "Criminal";
             // 
@@ -132,9 +132,9 @@ namespace ite_485_project
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bernard MT Condensed", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(219, 8);
+            this.label4.Location = new System.Drawing.Point(499, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 17);
+            this.label4.Size = new System.Drawing.Size(96, 33);
             this.label4.TabIndex = 12;
             this.label4.Text = "Storage";
             // 
@@ -143,9 +143,9 @@ namespace ite_485_project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(73, 8);
+            this.label2.Location = new System.Drawing.Point(130, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 17);
+            this.label2.Size = new System.Drawing.Size(156, 33);
             this.label2.TabIndex = 10;
             this.label2.Text = "Investigation";
             // 
@@ -154,9 +154,9 @@ namespace ite_485_project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bernard MT Condensed", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(150, 8);
+            this.label3.Location = new System.Drawing.Point(281, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 17);
+            this.label3.Size = new System.Drawing.Size(144, 33);
             this.label3.TabIndex = 11;
             this.label3.Text = "Information";
             // 
@@ -165,16 +165,16 @@ namespace ite_485_project
             this.panel2.Controls.Add(this.btnNewCase);
             this.panel2.Controls.Add(this.btnOpenCase);
             this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Location = new System.Drawing.Point(30, 45);
+            this.panel2.Location = new System.Drawing.Point(65, 42);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 264);
+            this.panel2.Size = new System.Drawing.Size(453, 352);
             this.panel2.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(304, 314);
+            this.ClientSize = new System.Drawing.Size(609, 403);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

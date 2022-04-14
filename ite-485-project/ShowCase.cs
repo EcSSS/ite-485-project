@@ -37,6 +37,9 @@ namespace ite_485_project
 
 
             txtCaseNo.Text = ViewCases.SetValue;
+            txtOffenderName.Text = ViewCases.OffenderName;
+            txtCaseStatus.Text = ViewCases.CaseStatus;
+
             
 
             using (SqlConnection cn = GetConnection())
@@ -305,6 +308,12 @@ namespace ite_485_project
             {
                 string EvidenceNo = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
                 txtEvidenceNo.Text = EvidenceNo;
+
+                string EvidenceName = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                txtEvidenceName.Text = EvidenceName;
+
+
+
             }
 
 
@@ -319,5 +328,7 @@ namespace ite_485_project
             home2.ShowDialog();
 
         }
+
+        
     }
 }

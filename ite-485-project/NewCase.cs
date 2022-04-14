@@ -207,8 +207,8 @@ namespace ite_485_project
             timePicker = new DateTimePicker();
             timePicker.Format = DateTimePickerFormat.Time;
             timePicker.ShowUpDown = true;
-            timePicker.Location = new Point(124, 169);
-            timePicker.Width = 100;
+            timePicker.Location = new Point(230, 361);
+            timePicker.Width = 170;
             Controls.Add(timePicker);
             
 

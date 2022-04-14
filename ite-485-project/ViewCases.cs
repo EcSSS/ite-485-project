@@ -15,6 +15,8 @@ namespace ite_485_project
         string connectionString = @"Server=tcp:ite-485-database-sever.database.windows.net,1433;Initial Catalog=ite-485-database;Persist Security Info=False;User ID=EcS;Password=Eric20000;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         public static string SetValue = "";
+        public static string OffenderName = "";
+        public static string CaseStatus = "";
 
         public ViewCases()
         {
@@ -51,12 +53,24 @@ namespace ite_485_project
                 string caseId = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
                 string officerName = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
                 string offenderName = dataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
-                string caseStatus = dataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
+                string caseStatus1 = dataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
                 txtCaseNum.Text = caseId;
                 txtOfficerName.Text = officerName;
                 txtOffenderName.Text = offenderName;
+                OffenderName = txtOffenderName.Text;
+                if (caseStatus1 == "True")
+                {
+                    CaseStatus = "Open";
+                }
+                if(caseStatus1 == "False")
+                {
+                    CaseStatus = "Closed";
+                }
+                
             }
+            
 
+            
         }
 
         private void button2_Click_1(object sender, EventArgs e)
