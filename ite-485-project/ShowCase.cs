@@ -40,6 +40,11 @@ namespace ite_485_project
             txtOffenderName.Text = ViewCases.OffenderName;
             txtCaseStatus.Text = ViewCases.CaseStatus;
 
+            if (txtCaseStatus.Text == "Closed")
+            {
+                btnClose.Visible = false;
+            }
+
             
 
             using (SqlConnection cn = GetConnection())
@@ -300,6 +305,10 @@ namespace ite_485_project
                 cmd.ExecuteNonQuery();
             }
 
+            if(txtOfficerNameCheckout.Text == "")
+            {
+                MessageBox.Show("Must enter officer name to update evidence checkout");
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

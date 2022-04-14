@@ -929,23 +929,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eric\\.nuget\\packages\\": {},
+    "C:\\Users\\erics\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eric\\Documents\\ITE 485 Project\\ite-485-project\\ite-485-project\\ite-485-project\\ite-485-project.csproj",
+      "projectUniqueName": "C:\\Users\\erics\\Source\\Repos\\EcSSS\\ite-485-project\\ite-485-project\\ite-485-project.csproj",
       "projectName": "ite-485-project",
-      "projectPath": "C:\\Users\\Eric\\Documents\\ITE 485 Project\\ite-485-project\\ite-485-project\\ite-485-project\\ite-485-project.csproj",
-      "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eric\\Documents\\ITE 485 Project\\ite-485-project\\ite-485-project\\ite-485-project\\obj\\",
+      "projectPath": "C:\\Users\\erics\\Source\\Repos\\EcSSS\\ite-485-project\\ite-485-project\\ite-485-project.csproj",
+      "packagesPath": "C:\\Users\\erics\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\erics\\Source\\Repos\\EcSSS\\ite-485-project\\ite-485-project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Eric\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\erics\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
