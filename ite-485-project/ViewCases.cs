@@ -76,10 +76,11 @@ namespace ite_485_project
         private void button2_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+            SetValue = "";
             Form1 home = new Form1();
             home.ShowDialog();
             this.Close();
-            SetValue = "";
+            
             
         }
 

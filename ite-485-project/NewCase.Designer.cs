@@ -56,7 +56,7 @@ namespace ite_485_project
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(284, 663);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(262, 81);
             this.button1.TabIndex = 0;
@@ -89,7 +89,7 @@ namespace ite_485_project
             // txtOfficer
             // 
             this.txtOfficer.Location = new System.Drawing.Point(230, 98);
-            this.txtOfficer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtOfficer.Margin = new System.Windows.Forms.Padding(6);
             this.txtOfficer.Name = "txtOfficer";
             this.txtOfficer.Size = new System.Drawing.Size(227, 39);
             this.txtOfficer.TabIndex = 1;
@@ -101,7 +101,7 @@ namespace ite_485_project
             this.btnSelectFile.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectFile.Image")));
             this.btnSelectFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSelectFile.Location = new System.Drawing.Point(11, 525);
-            this.btnSelectFile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSelectFile.Margin = new System.Windows.Forms.Padding(6);
             this.btnSelectFile.Name = "btnSelectFile";
             this.btnSelectFile.Size = new System.Drawing.Size(208, 70);
             this.btnSelectFile.TabIndex = 10;
@@ -113,7 +113,7 @@ namespace ite_485_project
             // txtFilePath
             // 
             this.txtFilePath.Location = new System.Drawing.Point(230, 538);
-            this.txtFilePath.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtFilePath.Margin = new System.Windows.Forms.Padding(6);
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.Size = new System.Drawing.Size(587, 39);
             this.txtFilePath.TabIndex = 3;
@@ -132,7 +132,7 @@ namespace ite_485_project
             // txtOffender
             // 
             this.txtOffender.Location = new System.Drawing.Point(230, 162);
-            this.txtOffender.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtOffender.Margin = new System.Windows.Forms.Padding(6);
             this.txtOffender.Name = "txtOffender";
             this.txtOffender.Size = new System.Drawing.Size(227, 39);
             this.txtOffender.TabIndex = 2;
@@ -151,7 +151,7 @@ namespace ite_485_project
             // dtDate
             // 
             this.dtDate.Location = new System.Drawing.Point(230, 299);
-            this.dtDate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dtDate.Margin = new System.Windows.Forms.Padding(6);
             this.dtDate.Name = "dtDate";
             this.dtDate.Size = new System.Drawing.Size(448, 39);
             this.dtDate.TabIndex = 19;
@@ -170,7 +170,7 @@ namespace ite_485_project
             // timePicker
             // 
             this.timePicker.Location = new System.Drawing.Point(230, 361);
-            this.timePicker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.timePicker.Margin = new System.Windows.Forms.Padding(6);
             this.timePicker.Name = "timePicker";
             this.timePicker.Size = new System.Drawing.Size(448, 39);
             this.timePicker.TabIndex = 21;
@@ -207,7 +207,7 @@ namespace ite_485_project
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button2.Location = new System.Drawing.Point(791, 2);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(63, 79);
             this.button2.TabIndex = 16;
@@ -217,7 +217,7 @@ namespace ite_485_project
             // txttest
             // 
             this.txttest.Location = new System.Drawing.Point(33, 683);
-            this.txttest.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txttest.Margin = new System.Windows.Forms.Padding(6);
             this.txttest.Name = "txttest";
             this.txttest.Size = new System.Drawing.Size(0, 39);
             this.txttest.TabIndex = 24;
@@ -226,7 +226,7 @@ namespace ite_485_project
             // 
             this.txtsno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.txtsno.Location = new System.Drawing.Point(33, 683);
-            this.txtsno.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtsno.Margin = new System.Windows.Forms.Padding(6);
             this.txtsno.Name = "txtsno";
             this.txtsno.Size = new System.Drawing.Size(0, 39);
             this.txtsno.TabIndex = 25;
@@ -254,8 +254,8 @@ namespace ite_485_project
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "NewCase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NewCase";

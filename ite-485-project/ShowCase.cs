@@ -100,7 +100,7 @@ namespace ite_485_project
             }
             catch (Exception)
             {
-                MessageBox.Show("Error when opening file")
+                MessageBox.Show("Error when opening file");
             }
             
 
@@ -254,6 +254,8 @@ namespace ite_485_project
 
             }
 
+            
+
 
         }
 
@@ -340,10 +342,31 @@ namespace ite_485_project
 
         private void button6_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
             this.Hide();
             ViewCases viewcase = new ViewCases();
             viewcase.ShowDialog();
             this.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection cn = GetConnection())
+            {
+
+                string query = "SELECT SNo,DisplayName,Extension,FileSize,UploadDate,Time FROM dbo.Documents WHERE CaseNum='" + txtCaseNo.Text + "'";
+                SqlDataAdapter adp = new SqlDataAdapter(query, cn);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+
+            }
         }
     }
 }

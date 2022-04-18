@@ -63,6 +63,7 @@ namespace ite_485_project
             this.label12 = new System.Windows.Forms.Label();
             this.txtCaseStatus = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,7 +195,9 @@ namespace ite_485_project
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1005, 1397);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(1032, 1395);
             this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(241, 49);
@@ -246,7 +249,9 @@ namespace ite_485_project
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1288, 1397);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.Location = new System.Drawing.Point(1315, 1395);
             this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(241, 49);
@@ -257,6 +262,8 @@ namespace ite_485_project
             // 
             // button3
             // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button3.Location = new System.Drawing.Point(100, 1272);
             this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
@@ -280,7 +287,7 @@ namespace ite_485_project
             // 
             // txtFilePath
             // 
-            this.txtFilePath.Location = new System.Drawing.Point(917, 1346);
+            this.txtFilePath.Location = new System.Drawing.Point(944, 1344);
             this.txtFilePath.Margin = new System.Windows.Forms.Padding(6);
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.Size = new System.Drawing.Size(977, 39);
@@ -288,7 +295,9 @@ namespace ite_485_project
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(1566, 1397);
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSave.Location = new System.Drawing.Point(1593, 1395);
             this.btnSave.Margin = new System.Windows.Forms.Padding(6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(241, 49);
@@ -314,6 +323,8 @@ namespace ite_485_project
             // 
             // btnClose
             // 
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnClose.Location = new System.Drawing.Point(219, 604);
             this.btnClose.Margin = new System.Windows.Forms.Padding(6);
             this.btnClose.Name = "btnClose";
@@ -351,6 +362,8 @@ namespace ite_485_project
             // 
             // button5
             // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button5.Location = new System.Drawing.Point(382, 1272);
             this.button5.Margin = new System.Windows.Forms.Padding(6);
             this.button5.Name = "button5";
@@ -380,7 +393,7 @@ namespace ite_485_project
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1212, 1181);
+            this.dataGridView1.Size = new System.Drawing.Size(1229, 1181);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -402,20 +415,37 @@ namespace ite_485_project
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1839, 29);
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button6.Location = new System.Drawing.Point(1995, 13);
+            this.button6.Margin = new System.Windows.Forms.Padding(6);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 46);
-            this.button6.TabIndex = 53;
-            this.button6.Text = "button6";
+            this.button6.Size = new System.Drawing.Size(41, 79);
+            this.button6.TabIndex = 54;
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // button7
+            // 
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(807, 86);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(150, 46);
+            this.button7.TabIndex = 55;
+            this.button7.Text = "Refresh";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // ShowCase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(2034, 1460);
+            this.ClientSize = new System.Drawing.Size(2051, 1460);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.txtCaseStatus);
             this.Controls.Add(this.label12);
@@ -449,6 +479,7 @@ namespace ite_485_project
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtDate);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ShowCase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -494,5 +525,6 @@ namespace ite_485_project
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtCaseStatus;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

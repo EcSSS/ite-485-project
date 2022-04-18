@@ -124,7 +124,6 @@ C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\bin\Debug\
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.csproj.AssemblyReference.cache
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.ClosedCases.resources
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.Form1.resources
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.Form2.resources
@@ -146,3 +145,4 @@ C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\bin\Debug\
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.dll
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.pdb
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.genruntimeconfig.cache
+C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.csproj.AssemblyReference.cache
