@@ -62,6 +62,7 @@ namespace ite_485_project
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCaseStatus = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -379,7 +380,7 @@ namespace ite_485_project
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1182, 1181);
+            this.dataGridView1.Size = new System.Drawing.Size(1212, 1181);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -399,12 +400,23 @@ namespace ite_485_project
             this.txtCaseStatus.Size = new System.Drawing.Size(200, 39);
             this.txtCaseStatus.TabIndex = 52;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(1839, 29);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(150, 46);
+            this.button6.TabIndex = 53;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // ShowCase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(2021, 1460);
+            this.ClientSize = new System.Drawing.Size(2034, 1460);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.txtCaseStatus);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -481,5 +493,6 @@ namespace ite_485_project
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtCaseStatus;
+        private System.Windows.Forms.Button button6;
     }
 }

@@ -88,7 +88,8 @@ namespace ite_485_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 var selectedRow = dataGridView1.SelectedRows;
                 foreach (var row in selectedRow)
                 {
@@ -99,9 +100,9 @@ namespace ite_485_project
             }
             catch (Exception)
             {
-                MessageBox.Show("Error during open file sequence");
-                return;
+                MessageBox.Show("Error when opening file")
             }
+            
 
         }
         private void OpenFile(int id)
@@ -130,7 +131,7 @@ namespace ite_485_project
 
                         if (extn == ".pdf")
                         {
-                            string filepath = @"C:\Users\erics\Downloads\" + name + ".pdf";
+                            string filepath = @"C:\Users\Eric\Downloads\" + name;
                             FS = new FileStream(filepath, System.IO.FileMode.Create);
 
                             FS.Write(data, 0, data.Length);
@@ -142,7 +143,7 @@ namespace ite_485_project
                         }
                         if (extn == ".docx")
                         {
-                            string filepath = @"C:\Users\erics\Downloads\" + name + ".docx";
+                            string filepath = @"C:\Users\Eric\Downloads\" + name;
                             FS = new FileStream(filepath, System.IO.FileMode.Create);
 
                             FS.Write(data, 0, data.Length);
@@ -154,7 +155,7 @@ namespace ite_485_project
                         }
                         if (extn == ".jpg")
                         {
-                            string filepath = @"C:\Users\erics\Downloads\" + name + ".jpg";
+                            string filepath = @"C:\Users\Eric\Downloads\" + name;
                             FS = new FileStream(filepath, System.IO.FileMode.Create);
 
                             FS.Write(data, 0, data.Length);
@@ -168,11 +169,11 @@ namespace ite_485_project
                     }
 
                 }
+
             }
             catch (Exception)
             {
-                MessageBox.Show("Error during open file sequence");
-                return;
+                MessageBox.Show("Error when opening file");
             }
         }
         private SqlConnection GetConnection()
@@ -241,7 +242,6 @@ namespace ite_485_project
                 string FileName = new FileInfo(filepath).Name;
 
                 SqlCommand cmd = new SqlCommand(query6, cn);
-                //cmd.Parameters.Add("@OfficerName", SqlDbType.VarChar).Value = officerName2;
                 cmd.Parameters.Add("@Date", SqlDbType.DateTime).Value = date2;
                 cmd.Parameters.Add("@SNo", SqlDbType.Int).Value = txtControlSNo.Text;
                 cmd.Parameters.Add("@EvidenceName", SqlDbType.VarChar).Value = FileName;
@@ -265,7 +265,7 @@ namespace ite_485_project
             using (SqlConnection cn = GetConnection())
             {
                 SqlCommand cmd = new SqlCommand(query, cn);
-                //cmd.Parameters.Add("@CaseStatus", SqlDbType.Bit).Value = 0;
+
                 cn.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -338,6 +338,12 @@ namespace ite_485_project
 
         }
 
-        
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewCases viewcase = new ViewCases();
+            viewcase.ShowDialog();
+            this.Close();
+        }
     }
 }
