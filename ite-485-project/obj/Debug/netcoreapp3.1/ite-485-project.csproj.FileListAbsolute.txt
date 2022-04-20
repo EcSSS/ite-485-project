@@ -146,3 +146,40 @@ C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\bin\Debug\
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.pdb
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.genruntimeconfig.cache
 C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.csproj.AssemblyReference.cache
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.exe
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.deps.json
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.runtimeconfig.json
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.runtimeconfig.dev.json
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\Azure.Core.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\Azure.Storage.Blobs.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\Azure.Storage.Common.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.IO.Hashing.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Memory.Data.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.csproj.AssemblyReference.cache
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.ClosedCases.resources
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.Form1.resources
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.Form2.resources
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.NewCase.resources
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.Properties.Resources.resources
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.ShowCase.resources
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.ViewCases.resources
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.GeneratedMSBuildEditorConfig.editorconfig
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.AssemblyInfoInputs.cache
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.AssemblyInfo.cs
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.csproj.CopyComplete
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.dll
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.pdb
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.genruntimeconfig.cache
+\\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.pdb

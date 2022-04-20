@@ -35,6 +35,7 @@ namespace ite_485_project
 
                 dataGridView1.DataSource = dtbl1;
             }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

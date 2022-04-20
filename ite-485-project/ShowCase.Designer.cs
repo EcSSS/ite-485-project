@@ -64,6 +64,7 @@ namespace ite_485_project
             this.txtCaseStatus = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,7 +187,7 @@ namespace ite_485_project
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(1121, 57);
+            this.label8.Location = new System.Drawing.Point(1202, 57);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(508, 77);
@@ -264,13 +265,14 @@ namespace ite_485_project
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(100, 1272);
+            this.button3.Location = new System.Drawing.Point(219, 1339);
             this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(271, 49);
             this.button3.TabIndex = 39;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label11
@@ -364,7 +366,7 @@ namespace ite_485_project
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button5.Location = new System.Drawing.Point(382, 1272);
+            this.button5.Location = new System.Drawing.Point(219, 1272);
             this.button5.Margin = new System.Windows.Forms.Padding(6);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(271, 49);
@@ -408,6 +410,7 @@ namespace ite_485_project
             // 
             // txtCaseStatus
             // 
+            this.txtCaseStatus.Enabled = false;
             this.txtCaseStatus.Location = new System.Drawing.Point(445, 501);
             this.txtCaseStatus.Name = "txtCaseStatus";
             this.txtCaseStatus.Size = new System.Drawing.Size(200, 39);
@@ -431,13 +434,26 @@ namespace ite_485_project
             // button7
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(807, 86);
+            this.button7.Location = new System.Drawing.Point(807, 73);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(150, 46);
+            this.button7.Size = new System.Drawing.Size(129, 49);
             this.button7.TabIndex = 55;
             this.button7.Text = "Refresh";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpen.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnOpen.Location = new System.Drawing.Point(219, 604);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(6);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(271, 49);
+            this.btnOpen.TabIndex = 56;
+            this.btnOpen.Text = "Open Case";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.button8_Click);
             // 
             // ShowCase
             // 
@@ -445,6 +461,7 @@ namespace ite_485_project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(2051, 1460);
+            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.txtCaseStatus);
@@ -526,5 +543,6 @@ namespace ite_485_project
         private System.Windows.Forms.TextBox txtCaseStatus;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnOpen;
     }
 }

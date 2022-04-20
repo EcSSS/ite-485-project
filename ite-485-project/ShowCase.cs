@@ -43,6 +43,12 @@ namespace ite_485_project
             if (txtCaseStatus.Text == "Closed")
             {
                 btnClose.Visible = false;
+                btnOpen.Visible = true;
+            }
+            if(txtCaseStatus.Text == "Open")
+            {
+                btnOpen.Visible = false;
+                btnClose.Visible = true;
             }
 
             
@@ -88,21 +94,55 @@ namespace ite_485_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (txtOfficerNameCheckout.Text == "")
             {
-                var selectedRow = dataGridView1.SelectedRows;
-                foreach (var row in selectedRow)
+                MessageBox.Show("Must enter name before you can view case file");
+            }
+            else
+            {
+                try
                 {
-                    int id = (int)((DataGridViewRow)row).Cells[0].Value;
+                    var selectedRow = dataGridView1.SelectedRows;
+                    foreach (var row in selectedRow)
+                    {
+                        int id = (int)((DataGridViewRow)row).Cells[0].Value;
 
-                    OpenFile(id);
+                        OpenFile(id);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error when opening file");
+                }
+
+                string query = "IF EXISTS(SELECT SNo FROM dbo.ChainOfCustody WHERE SNo='" + txtEvidenceNo.Text + "')INSERT INTO dbo.ChainOfCustody(SNo,OfficerName,Date,Time,EvidenceName)VALUES(@SNo,@OfficerName,@Date,@Time,@EvidenceName)";
+
+                string time = timePicker.Text;
+
+
+                using (SqlConnection cn = GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.Add("@SNo", SqlDbType.Int).Value = txtEvidenceNo.Text;
+                    cmd.Parameters.Add("@OfficerName", SqlDbType.VarChar).Value = txtOfficerNameCheckout.Text;
+                    cmd.Parameters.Add("@Date", SqlDbType.DateTime).Value = dateTimePicker1.Text;
+                    cmd.Parameters.Add("@Time", SqlDbType.VarChar).Value = time;
+
+                    if (dataGridView1.SelectedRows.Count > 0)
+                    {
+                        string EvidenceName = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                        cmd.Parameters.Add("@EvidenceName", SqlDbType.VarChar).Value = EvidenceName;
+                    }
+
+
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
                 }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Error when opening file");
-            }
+
             
+
+
 
         }
         private void OpenFile(int id)
@@ -131,7 +171,7 @@ namespace ite_485_project
 
                         if (extn == ".pdf")
                         {
-                            string filepath = @"C:\Users\Eric\Downloads\" + name;
+                            string filepath = @"C:\Users\ericsternbergjr\Downloads\" + name;
                             FS = new FileStream(filepath, System.IO.FileMode.Create);
 
                             FS.Write(data, 0, data.Length);
@@ -143,19 +183,19 @@ namespace ite_485_project
                         }
                         if (extn == ".docx")
                         {
-                            string filepath = @"C:\Users\Eric\Downloads\" + name;
+                            string filepath = @"C:\Users\ericsternbergjr\Downloads\" + name;
                             FS = new FileStream(filepath, System.IO.FileMode.Create);
 
                             FS.Write(data, 0, data.Length);
                             FS.Close();
 
-                            string wordReaderPath = @"C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE";
+                            string wordReaderPath = @"C:\Program Files (x86)\Microsoft Office\root\Office16\WINWORD.EXE";
 
                             System.Diagnostics.Process.Start(wordReaderPath, filepath);
                         }
                         if (extn == ".jpg")
                         {
-                            string filepath = @"C:\Users\Eric\Downloads\" + name;
+                            string filepath = @"C:\Users\ericsternbergjr\Downloads\" + name;
                             FS = new FileStream(filepath, System.IO.FileMode.Create);
 
                             FS.Write(data, 0, data.Length);
@@ -368,5 +408,17 @@ namespace ite_485_project
 
             }
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string query = "UPDATE dbo.CaseInfo SET CaseStatus='" + 1 + "' WHERE CaseNum='" + txtCaseNo.Text + "'";
+            using (SqlConnection cn = GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand(query, cn);
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }   
     }
 }

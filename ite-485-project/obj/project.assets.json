@@ -929,24 +929,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eric\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ericsternbergjr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eric\\Desktop\\ite-485-project\\ite-485-project\\ite-485-project\\ite-485-project.csproj",
+      "projectUniqueName": "C:\\Users\\ericsternbergjr\\source\\repos\\ite-485-project\\ite-485-project\\ite-485-project.csproj",
       "projectName": "ite-485-project",
-      "projectPath": "C:\\Users\\Eric\\Desktop\\ite-485-project\\ite-485-project\\ite-485-project\\ite-485-project.csproj",
-      "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eric\\Desktop\\ite-485-project\\ite-485-project\\ite-485-project\\obj\\",
+      "projectPath": "C:\\Users\\ericsternbergjr\\source\\repos\\ite-485-project\\ite-485-project\\ite-485-project.csproj",
+      "packagesPath": "C:\\Users\\ericsternbergjr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ericsternbergjr\\source\\repos\\ite-485-project\\ite-485-project\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Eric\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ericsternbergjr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -999,7 +994,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }
