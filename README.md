@@ -36,5 +36,6 @@
 * Seperating case files based on who they are assigned to
 * Seperate table that has info on each offender and the cases assigned to them
 * Settings tab that allows you update correct file paths for the system instead of doing in the code
+* Mass file upload
 
 
