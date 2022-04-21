@@ -159,7 +159,7 @@ namespace ite_485_project
 
                 }
 
-                
+                MessageBox.Show("New case created");
             }
             catch (Exception)
             {
