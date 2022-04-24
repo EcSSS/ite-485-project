@@ -37,5 +37,6 @@
 * Seperate table that has info on each offender and the cases assigned to them
 * Settings tab that allows you update correct file paths for the system instead of doing in the code
 * Mass file upload
+* Admin Portal - shows things like # of files total and capacity remaining in cloud drive
 
 
