@@ -183,3 +183,40 @@ C:\Users\Eric\Desktop\ite-485-project\ite-485-project\ite-485-project\obj\Debug\
 \\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.pdb
 \\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.genruntimeconfig.cache
 \\Mac\Home\Desktop\ite-485-project (2)\ite-485-project\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.pdb
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.exe
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.deps.json
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.runtimeconfig.json
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.runtimeconfig.dev.json
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\ite-485-project.pdb
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\Azure.Storage.Blobs.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\Azure.Storage.Common.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.IO.Hashing.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Memory.Data.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.csproj.AssemblyReference.cache
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.ClosedCases.resources
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.Form1.resources
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.Form2.resources
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.NewCase.resources
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.Properties.Resources.resources
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.ShowCase.resources
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite_485_project.ViewCases.resources
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.csproj.GenerateResource.cache
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.AssemblyInfoInputs.cache
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.AssemblyInfo.cs
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.csproj.CoreCompileInputs.cache
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.csproj.CopyComplete
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.dll
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.pdb
+C:\Users\ericsternbergjr\source\repos\ite-485-project\ite-485-project\obj\Debug\netcoreapp3.1\ite-485-project.genruntimeconfig.cache

@@ -167,12 +167,12 @@ namespace ite_485_project
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(50, 792);
+            this.label10.Location = new System.Drawing.Point(174, 806);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(677, 77);
+            this.label10.Size = new System.Drawing.Size(411, 77);
             this.label10.TabIndex = 29;
-            this.label10.Text = "Chain of Custody Update";
+            this.label10.Text = "File View Audit";
             // 
             // dateTimePicker1
             // 
