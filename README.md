@@ -3,7 +3,7 @@
 # ITE-485 Project Documentation
 * This project is for the ITE-485 end of degree demo class
 
-
+# SYSTEM WILL NOT WORK UNLESS YOU HAVE THE DATABASE PASSWORD LINKED WITH THIS CODE
 
 
 # Notes to mention
