@@ -294,7 +294,7 @@ namespace ite_485_project
 
             }
 
-            
+            MessageBox.Show("New case file uploaded");
 
 
         }
